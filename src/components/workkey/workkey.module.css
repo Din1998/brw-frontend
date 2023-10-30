@@ -1,0 +1,68 @@
+.card_wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    position: relative;
+    
+}
+
+.card_wrap::after{
+    content: "";
+    top: 55px;
+    right: -530px;
+    position: absolute;
+    width: 600px;
+    height: 1px;
+    border: 1px dashed hsl(var(--black)/.07);
+}
+
+.icon_wrap{
+    width: 108px;
+    height: 108px;
+    background: hsl(179, 96%, 33%);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 36px;
+    color: hsl(var(--white));
+    margin-bottom: 30px;
+}
+
+.number{
+  position: absolute;
+  height: 34px;
+  width: 34px;
+  border: 2px solid hsl(var(--white));
+  border-radius: 50%;
+  background: hsl(var(--base));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+}
+
+.number p{
+    color: hsl(var(--white));
+    font-size: 16px;
+}
+
+.title{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 2.16;
+    text-align: center;
+    margin: 0px;
+}
+
+.subtitle{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.75;
+    text-align: center;
+}

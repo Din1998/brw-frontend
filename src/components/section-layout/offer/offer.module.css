@@ -1,0 +1,19 @@
+.offer_section{
+    padding: 100px 0px;
+    position: relative;
+    overflow: hidden;
+}
+.key_component_wrap{
+    padding: 12px 0px;
+}
+.offer_bgImg1{
+    position: absolute;
+    top: 0;
+}
+
+.offer_bgImg2{
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+
+}

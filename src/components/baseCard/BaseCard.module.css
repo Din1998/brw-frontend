@@ -1,0 +1,73 @@
+.base_card_wrap{
+  background: hsl(var(--white));
+  border-radius: 8px;
+  overflow: hidden;
+}
+.content_wrap {
+  padding: 26px 14px 14px;
+}
+.title{
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px !important;
+}
+.option_wrap ul{
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.option_wrap ul li{
+  position: relative;
+  color: hsl(var(--black)/0.5);
+}
+.option_wrap ul li::after{
+  position: absolute;
+  content: "";
+  top: 5px;
+  right: -9px;
+  width: 1px;
+  height: 16px;
+  background: hsl(var(--black)/0.1);
+}
+
+.option_wrap ul li:last-child::after{
+  content: none;
+}
+.rating_wrap{
+  display: flex;
+  gap: 8px;
+  margin-bottom: 26px;
+}
+.rating_wrap ul{
+  display: flex !important;
+}
+
+
+.rating_wrap ul li i{
+  color: hsl(var(--yellow));
+  font-size: 13px;
+}
+
+.card_btm{
+  display: flex;
+  justify-content: space-between;
+}
+
+.price_wrap .price{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 0.88;
+  color: hsl(var(--black));
+  margin-bottom: 8px !important;
+}
+
+.price_wrap .price span{
+  color: hsl(var(--black)/0.5);
+}
+
+.discount_price{
+  text-decoration: line-through;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14
+}

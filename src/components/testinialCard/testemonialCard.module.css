@@ -1,0 +1,54 @@
+
+
+.card_wrap{
+    background: hsl(var(--black)/0.1);
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.user_meta{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+.name{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.location{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.28;
+}
+
+.rating_wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 13px;
+}
+
+.rating_wrap ul{
+    display: flex;
+}
+
+.rating_wrap ul li i{
+    color: hsl(var(--yellow));
+}
+
+.time_status{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.12;
+}
+
+.description{
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.56;
+}

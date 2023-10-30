@@ -1,0 +1,25 @@
+.offer_key_wrap{
+    display: flex;
+    padding: 20px 30px;
+}
+
+.offer_key_wrap .icon_wrap svg{
+    font-size: 52px;
+    color: hsl(var(--base));
+}
+
+.offer_key_wrap .content_wrap{
+    padding: 0px 0px 20px 20px;
+}
+
+.offer_key_wrap .content_wrap .title{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.offer_key_wrap .content_wrap .subtitle{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.87;
+}

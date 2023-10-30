@@ -1,0 +1,33 @@
+.Breadcrumb_1{
+    position: relative;
+    padding: 24px 0px;
+    z-index: 1;
+}
+
+.lists{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.item a{
+    color: hsl(var(--black)/0.5);
+}
+
+.item a:hover{
+    color: hsl(var(--base));
+}
+
+
+.item{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 3.25;
+    color: hsl(var(--black)/0.5);
+}
+
+.icon{
+    font-size: 8px;
+    color: hsl(var(--black)/0.2);
+}
