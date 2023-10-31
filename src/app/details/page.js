@@ -32,6 +32,9 @@ import GLightbox from 'glightbox';
 import Link from 'next/link';
 import { DateRange } from 'react-date-range';
 import React, { useState,useEffect,useRef  } from 'react'
+import dynamic from 'next/dynamic';
+
+const Glightbox = dynamic(() => import('glightbox'), { ssr: false });
 
 
 
@@ -47,17 +50,16 @@ export default function Details() {
 
     const lightbox = useRef(null);
 
-    React.useEffect(() => {
-        // Check if window is defined (only runs in the browser)
-        if (typeof window !== 'undefined') {
-          const lightboxInstance = GLightbox({
-            selector: '.glightbox',
-            touchNavigation: true,
-          });
-          lightbox.current = lightboxInstance;
-        }
-      }, []);
-
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Load GLightbox only on the client-side
+      const lightboxInstance = GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true,
+      });
+      lightbox.current = lightboxInstance;
+    }
+  }, []);
     return (
         <section className="yachts_details">
 
