@@ -31,7 +31,7 @@ import GLightbox from 'glightbox';
 
 import Link from 'next/link';
 import { DateRange } from 'react-date-range';
-import React, { useState,useEffect } from 'react'
+import React, { useState,useEffect,useRef  } from 'react'
 
 
 
@@ -45,15 +45,15 @@ export default function Details() {
         }
     ]);
 
+    const lightbox = useRef(null);
+
     useEffect(() => {
-        if (typeof window !== 'undefined') {
-          // Check if window is defined (client-side)
-          const lightbox = GLightbox({
-            selector: '.glightbox',
-            // Other GLightbox options
-          });
-        }
-      }, []);
+        const lightboxInstance = GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true,
+        });
+        lightbox.current = lightboxInstance;
+    }, []);
 
     return (
         <section className="yachts_details">
