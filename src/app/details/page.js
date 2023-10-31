@@ -37,7 +37,7 @@ import React, { useState,useEffect,useRef  } from 'react'
 
 import dynamic from 'next/dynamic';
 
-const Gallery = dynamic(() => import('@/components/gallery/gallery'))
+const Gallery = dynamic(() => import('@/components/gallery/gallery'),{ssr:false})
 
 
 

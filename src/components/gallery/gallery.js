@@ -18,12 +18,15 @@ export default function Gallery(){
     const lightbox = useRef(null);
 
     useEffect(() => {
-        const lightboxInstance = GLightbox({
-        selector: '.glightbox',
-        touchNavigation: true,
-        });
-        lightbox.current = lightboxInstance;
-    }, []);
+        if (typeof window !== 'undefined') {
+          // Load GLightbox only on the client-side
+          const lightboxInstance = GLightbox({
+            selector: '.glightbox',
+            touchNavigation: true,
+          });
+          lightbox.current = lightboxInstance;
+        }
+      }, []);
 
 
     return(
