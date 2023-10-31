@@ -2303,13 +2303,16 @@ button:focus {
   color: hsl(var(--base));
   background: hsl(var(--white));
 }
+/* 
+.nav-justified .nav-item, .nav-justified>.nav-link {
+  flex-basis: 0;
+  flex-grow: 0;
+  text-align: center;
+  width: 120px !important;
+} */
 
 
 /* google map */
-
-
-
-
 .google-map-wrap{
   background: hsl(var(--white));
     padding: 12px;
@@ -2357,4 +2360,64 @@ button:focus {
 
 .pagination .page-item.active .page-link {
   color: hsl(var(--black));
+}
+
+
+/* review wrap */
+
+.review_box_wrap .title{
+  margin-bottom: 20px;
+}
+
+.review_wrap .user_meta{
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 16px;
+}
+
+.review_wrap .user_meta .user_info .name{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0px;
+}
+
+.review_wrap .user_meta .user_info .add{
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.28;
+}
+
+.review_wrap .star_wrap{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.review_wrap .star_wrap ul{
+  display: flex;
+  gap: 6px;
+}
+
+.review_wrap .star_wrap ul li i{
+  color: hsl(var(--yellow));
+}
+
+.review_wrap .star_wrap ul li:last-child{
+  color: hsl(var(--black)/0.5);
+}
+
+
+.review_wrap .review_text p{
+  font-style: italic;
+}
+
+/* react date picker */
+
+.rdrCalendarWrapper {
+  width: 100%;
+}
+.rdrMonth {
+  width: 100% !important;
 }
