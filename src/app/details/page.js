@@ -49,14 +49,16 @@ export default function Details() {
         // Check if we are on the client side (browser)
         if (typeof window !== 'undefined') {
           // Code that relies on the `window` object
-          const lightbox = GLightbox({
-            selector: '.glightbox',
+          import('glightbox').then((GLightbox) => {
+            const lightbox = GLightbox.default({
+              selector: '.glightbox',
+            });
+            
+            return () => {
+              // Cleanup code, if needed
+              lightbox.destroy();
+            };
           });
-    
-          return () => {
-            // Cleanup code, if needed
-            lightbox.destroy();
-          };
         }
       }, []);
 
