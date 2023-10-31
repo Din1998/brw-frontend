@@ -46,11 +46,13 @@ export default function Details() {
     ]);
 
     useEffect(() => {
-        const lightbox = GLightbox({
-          selector: '.glightbox', // CSS selector for elements to be lightboxed
-          touchNavigation: true, // Enable touch navigation
-          loop: true, // Enable looping of images
-        });
+        if (typeof window !== 'undefined') {
+          // Check if window is defined (client-side)
+          const lightbox = GLightbox({
+            selector: '.glightbox',
+            // Other GLightbox options
+          });
+        }
       }, []);
 
     return (
