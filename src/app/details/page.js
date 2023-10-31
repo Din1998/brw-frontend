@@ -46,17 +46,15 @@ export default function Details() {
     ]);
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
-          // Code that relies on the `window` object
-          const lightbox = GLightbox({
-            selector: '.glightbox',
-          });
     
-          return () => {
-            // Cleanup code, if needed
-            lightbox.destroy();
-          };
-        }
+        const lightbox = GLightbox({
+          selector: '.glightbox', 
+        });
+    
+        return () => {
+        
+          window.lightbox.destroy();
+        };
       }, []);
 
     return (
