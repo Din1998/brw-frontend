@@ -31,7 +31,7 @@ import GLightbox from 'glightbox';
 
 import Link from 'next/link';
 import { DateRange } from 'react-date-range';
-import { useState,useEffect } from 'react'
+import React, { useState,useEffect } from 'react'
 
 
 
