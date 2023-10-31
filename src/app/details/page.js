@@ -46,20 +46,11 @@ export default function Details() {
     ]);
 
     useEffect(() => {
-        // Check if we are on the client side (browser)
-        if (typeof window !== 'undefined') {
-          // Code that relies on the `window` object
-          import('glightbox').then((GLightbox) => {
-            const lightbox = GLightbox.default({
-              selector: '.glightbox',
-            });
-            
-            return () => {
-              // Cleanup code, if needed
-              lightbox.destroy();
-            };
-          });
-        }
+        const lightbox = GLightbox({
+          selector: '.glightbox', // CSS selector for elements to be lightboxed
+          touchNavigation: true, // Enable touch navigation
+          loop: true, // Enable looping of images
+        });
       }, []);
 
     return (
