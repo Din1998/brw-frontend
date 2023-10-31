@@ -46,15 +46,17 @@ export default function Details() {
     ]);
 
     useEffect(() => {
+        if (typeof window !== 'undefined') {
+          // Code that relies on the `window` object
+          const lightbox = GLightbox({
+            selector: '.glightbox',
+          });
     
-        const lightbox = GLightbox({
-          selector: '.glightbox', 
-        });
-    
-        return () => {
-        
-          lightbox.destroy();
-        };
+          return () => {
+            // Cleanup code, if needed
+            lightbox.destroy();
+          };
+        }
       }, []);
 
     return (
@@ -69,7 +71,7 @@ export default function Details() {
                         <Col lg={8}>
 
                             <div className="main_thumb_wrap">
-                                <a href={img1} className="glightbox">
+                                <a href='https://boat-rental.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg2.ff5bc929.png&w=1080&q=75' className="glightbox">
                                  <Image src={img1} alt='...' />
                                 </a>
                             </div>
@@ -78,12 +80,12 @@ export default function Details() {
 
                         <div className="thumb_right">
                                 <div className='thumb_wrap'>
-                                <a href={img1} className="glightbox">
+                                <a href='https://boat-rental.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg2.ff5bc929.png&w=1080&q=75' className="glightbox">
                                     <Image src={img2} alt='...' />
                                 </a>
                                 </div>
                                 <div className='thumb_wrap'>
-                                    <a href={img1} className="glightbox">
+                                    <a href='https://boat-rental.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg2.ff5bc929.png&w=1080&q=75' className="glightbox">
                                     <Image src={img3} alt='...' />
                                     </a>
                                     
