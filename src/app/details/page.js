@@ -26,15 +26,18 @@ import userImg3 from '@/assets/image/user/user3.png'
 
 import Review from '@/components/productReciew/review';
 import Pagination from '@/components/pagination/pagination';
-import GLightbox from 'glightbox';
+
 
 
 import Link from 'next/link';
 import { DateRange } from 'react-date-range';
+
+
 import React, { useState,useEffect,useRef  } from 'react'
+
 import dynamic from 'next/dynamic';
 
-const Glightbox = dynamic(() => import('glightbox'), { ssr: false });
+const Gallery = dynamic(() => import('@/components/gallery/gallery'))
 
 
 
@@ -48,18 +51,9 @@ export default function Details() {
         }
     ]);
 
-    const lightbox = useRef(null);
+   
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Load GLightbox only on the client-side
-      const lightboxInstance = GLightbox({
-        selector: '.glightbox',
-        touchNavigation: true,
-      });
-      lightbox.current = lightboxInstance;
-    }
-  }, []);
+
     return (
         <section className="yachts_details">
 
@@ -68,7 +62,7 @@ export default function Details() {
                 {/* breadcrumb */}
                 <Breadcrumb />
                 <div className="page_wrap">
-                    <Row>
+                    {/* <Row>
                         <Col lg={8}>
 
                             <div className="main_thumb_wrap">
@@ -93,7 +87,11 @@ export default function Details() {
                                 </div>
                             </div>
                         </Col>
-                    </Row>
+                    </Row> */}
+
+                    <Gallery />
+
+
                     <Row className='gx-3'>
                         <Col lg={8}>
                             <div className='left_side'>
