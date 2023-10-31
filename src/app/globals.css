@@ -1648,6 +1648,7 @@ input[type=number] {
 .form_check {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .form_check a {

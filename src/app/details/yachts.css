@@ -261,3 +261,45 @@ body{
     border-bottom: 1px solid hsl(var(--black)/0.1);
     padding-bottom: 30px;
 }
+
+
+/* extra service */
+
+.extra_service{
+    border-bottom: 1px solid hsl(var(--black)/0.04);
+}
+
+.extra_item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.extra_item .item_name {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+ 
+    
+}
+.extra_item .item_name span{
+    color: hsl(var(--black)/0.4);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.total_price .price_wrap{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.total_price .price_wrap .title{
+    margin: 0px;
+    color: hsl(var(--black)/0.5);
+}
+.total_price .price_wrap .price{
+    margin: 0px;
+    color: hsl(var(--base));
+}

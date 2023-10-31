@@ -7,6 +7,9 @@ import { Row, Container, Col, Tabs, Tab } from 'react-bootstrap';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 
+
+import 'glightbox/dist/css/glightbox.css';
+
 import './yachts.css'
 
 import img1 from '@/assets/image/product/img2.png'
@@ -23,11 +26,12 @@ import userImg3 from '@/assets/image/user/user3.png'
 
 import Review from '@/components/productReciew/review';
 import Pagination from '@/components/pagination/pagination';
+import GLightbox from 'glightbox';
 
 
 import Link from 'next/link';
 import { DateRange } from 'react-date-range';
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 
 
 
@@ -41,6 +45,17 @@ export default function details() {
         }
     ]);
 
+    useEffect(() => {
+    
+        const lightbox = GLightbox({
+          selector: '.glightbox', 
+        });
+    
+        return () => {
+        
+          lightbox.destroy();
+        };
+      }, []);
 
     return (
         <section className="yachts_details">
@@ -50,12 +65,35 @@ export default function details() {
                 {/* breadcrumb */}
                 <Breadcrumb />
                 <div className="page_wrap">
+                    <Row>
+                        <Col lg={8}>
+
+                            <div className="main_thumb_wrap">
+                                <a href={img1} className="glightbox">
+                                 <Image src={img1} alt='...' />
+                                </a>
+                            </div>
+                        </Col>
+                        <Col lg={4}>
+
+                        <div className="thumb_right">
+                                <div className='thumb_wrap'>
+                                <a href={img1} className="glightbox">
+                                    <Image src={img2} alt='...' />
+                                </a>
+                                </div>
+                                <div className='thumb_wrap'>
+                                    <a href={img1} className="glightbox">
+                                    <Image src={img3} alt='...' />
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
                     <Row className='gx-3'>
                         <Col lg={8}>
                             <div className='left_side'>
-                                <div className="main_thumb_wrap">
-                                    <Image src={img1} alt='...' />
-                                </div>
                                 <div className='details_wrap'>
                                     <div className='title_wrap'>
                                         <h6 className='title'>Romantic Lagoon 380</h6>
@@ -91,34 +129,9 @@ export default function details() {
                                         {/* discription */}
                                         <div className='description mb-4'>
                                             <p className='mb-3'>With a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. Tgenerated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section </p>
-                                            <p>Maecenas blandit lacinia metus eu tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis volutpat finibus justo sed vehicula. Fusce pellentesque turpis ac molestie auctor. Pellentesque habitant morbi tristique senectus</p>
+                                           
                                         </div>
-                                        {/* gallery */}
-                                        <div className='gallery_wrap mb-4'>
-                                            <Row className='gy-4'>
-                                                <Col lg={6}>
-                                                    <div className='thumb_wrap'>
-                                                        <Image src={img1} alt='...' />
-                                                    </div>
-
-                                                </Col>
-                                                <Col lg={6}>
-                                                    <div className='thumb_wrap'>
-                                                        <Image src={img2} alt='...' />
-                                                    </div>
-                                                </Col>
-                                                <Col lg={6}>
-                                                    <div className='thumb_wrap'>
-                                                        <Image src={img3} alt='...' />
-                                                    </div>
-                                                </Col>
-                                                <Col lg={6}>
-                                                    <div className='thumb_wrap'>
-                                                        <Image src={img4} alt='...' />
-                                                    </div>
-                                                </Col>
-                                            </Row>
-                                        </div>
+                                    
                                         {/* Amenities */}
                                         <div className='amenities_wrap mb-4'>
                                             <h6 className='title'>Amenities</h6>
@@ -216,7 +229,7 @@ export default function details() {
                                         <div className='location_wrap mb-4'>
                                             <h6 className='title'>Yacht pick-up address</h6>
                                             <Row>
-                                                <Col lg={8}>
+                                                <Col lg={12}>
                                                     <div className='map_wrap'>
                                                         <iframe src="https://maps.google.com/maps?q={{ @$contact->data_values->latitude }},{{ @$contact->data_values->longitude }}&hl=es;z=14&amp;output=embed" ></iframe>
                                                     </div>
@@ -274,15 +287,6 @@ export default function details() {
                             </div>
                         </Col>
                         <Col lg={4}>
-                            {/* thumb box */}
-                            <div className="thumb_right">
-                                <div className='thumb_wrap'>
-                                    <Image src={img2} alt='...' />
-                                </div>
-                                <div className='thumb_wrap'>
-                                    <Image src={img3} alt='...' />
-                                </div>
-                            </div>
                             {/* user input box */}
                             <div className='right_box'>
                                 <div className='price_wrap mb-4'>
@@ -305,13 +309,57 @@ export default function details() {
                                         <input className='form_control' type='date' />
                                     </div>
 
-                                    <div className='form_group mb-3'>
+                                    <div className='form_group mb-5'>
                                         <label className='mb-2'>Guests</label>
                                         <input className='form_control' type='number' placeholder='Guests' />
                                     </div>
                                     <div className='extra_service'>
-                                        <h6>Add Extra Services <span>(optional)</span></h6>
+                                        <h6 className='mb-4'>Add Extra Services <span>(optional)</span></h6>
+                                        <div className='extra_item mb-2'>
+                                            <div class="form_check mb-20">
+                                                <input class="form_check_input" name="categories" type="checkbox" value="1" id="categories" />
+                                                <label class="form_check_label" for="chekbox-0">
+                                                    Safety net
+                                                </label>
+                                            </div>
+                                            <h6 className='item_name'>$145.00 <span>per day</span></h6>
+                                        </div>
+                                        <div className='extra_item mb-2'>
+                                            <div class="form_check mb-20">
+                                                <input class="form_check_input" name="categories" type="checkbox" value="1" id="categories" />
+                                                <label class="form_check_label" for="chekbox-0">
+                                                    Crew change
+                                                </label>
+                                            </div>
+                                            <h6 className='item_name'>$145.00 <span>per day</span></h6>
+                                        </div>
+                                        <div className='extra_item mb-2'>
+                                            <div class="form_check mb-20">
+                                                <input class="form_check_input" name="categories" type="checkbox" value="1" id="categories" />
+                                                <label class="form_check_label" for="chekbox-0">
+                                                    Kayak
+                                                </label>
+                                            </div>
+                                            <h6 className='item_name'>$145.00 <span>per day</span></h6>
+                                        </div>
+                                        <div className='extra_item mb-2'>
+                                            <div class="form_check mb-20">
+                                                <input class="form_check_input" name="categories" type="checkbox" value="1" id="categories" />
+                                                <label class="form_check_label" for="chekbox-0">
+                                                    Extra bed
+                                                </label>
+                                            </div>
+                                            <h6 className='item_name'>$145.00 <span>per day</span></h6>
+                                        </div>
                                         
+                                    </div>
+
+                                    <div className='total_price'>
+                                        <div className='price_wrap'>
+                                            <h6 className='title'>Your Price</h6>
+                                            <h6 className='price'>$979.00</h6>
+                                        </div>
+                                        <button className='btn__base w-100'>BOOK NOW</button>
                                     </div>
                                 </form>
                             </div>
