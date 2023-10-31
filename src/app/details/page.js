@@ -35,7 +35,7 @@ import { useState,useEffect } from 'react'
 
 
 
-export default function details() {
+export default function Details() {
 
     const [state, setState] = useState([
         {
