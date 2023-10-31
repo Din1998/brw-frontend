@@ -47,13 +47,16 @@ export default function Details() {
 
     const lightbox = useRef(null);
 
-    useEffect(() => {
-        const lightboxInstance = GLightbox({
-        selector: '.glightbox',
-        touchNavigation: true,
-        });
-        lightbox.current = lightboxInstance;
-    }, []);
+    React.useEffect(() => {
+        // Check if window is defined (only runs in the browser)
+        if (typeof window !== 'undefined') {
+          const lightboxInstance = GLightbox({
+            selector: '.glightbox',
+            touchNavigation: true,
+          });
+          lightbox.current = lightboxInstance;
+        }
+      }, []);
 
     return (
         <section className="yachts_details">
