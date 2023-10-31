@@ -31,32 +31,30 @@ export default function Gallery(){
 
     return(
         <div>
-             <Row>
-                        <Col lg={8}>
+            <Row className='gx-3'>
+                <Col lg={8}>
+                    <div className="main_thumb_wrap">
+                        <a href='https://boat-rental.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg2.ff5bc929.png&w=1080&q=75' className="glightbox">
+                            <Image src={img1} alt='...' />
+                        </a>
+                    </div>
+                </Col>
+                <Col lg={4}>
 
-                            <div className="main_thumb_wrap">
-                                <a href='https://boat-rental.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg2.ff5bc929.png&w=1080&q=75' className="glightbox">
-                                 <Image src={img1} alt='...' />
-                                </a>
-                            </div>
-                        </Col>
-                        <Col lg={4}>
-
-                        <div className="thumb_right">
-                                <div className='thumb_wrap'>
-                                <a href='https://boat-rental.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg2.ff5bc929.png&w=1080&q=75' className="glightbox">
-                                    <Image src={img2} alt='...' />
-                                </a>
-                                </div>
-                                <div className='thumb_wrap'>
-                                    <a href='https://boat-rental.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg2.ff5bc929.png&w=1080&q=75' className="glightbox">
-                                    <Image src={img3} alt='...' />
-                                    </a>
-                                    
-                                </div>
-                            </div>
-                        </Col>
-                    </Row>
+                <div className="thumb_right">
+                        <div className='thumb_wrap'>
+                        <a href='https://boat-rental.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg3.d714f3ef.png&w=384&q=75' className="glightbox">
+                            <Image src={img2} alt='...' />
+                        </a>
+                        </div>
+                        <div className='thumb_wrap'>
+                            <a href='https://boat-rental.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg4.787519fb.png&w=384&q=75' className="glightbox">
+                            <Image src={img3} alt='...' />
+                            </a>
+                        </div>
+                    </div>
+                </Col>
+            </Row>
         </div>
     )
 }

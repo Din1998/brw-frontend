@@ -62,36 +62,8 @@ export default function Details() {
                 {/* breadcrumb */}
                 <Breadcrumb />
                 <div className="page_wrap">
-                    {/* <Row>
-                        <Col lg={8}>
-
-                            <div className="main_thumb_wrap">
-                                <a href='https://boat-rental.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg2.ff5bc929.png&w=1080&q=75' className="glightbox">
-                                 <Image src={img1} alt='...' />
-                                </a>
-                            </div>
-                        </Col>
-                        <Col lg={4}>
-
-                        <div className="thumb_right">
-                                <div className='thumb_wrap'>
-                                <a href='https://boat-rental.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg2.ff5bc929.png&w=1080&q=75' className="glightbox">
-                                    <Image src={img2} alt='...' />
-                                </a>
-                                </div>
-                                <div className='thumb_wrap'>
-                                    <a href='https://boat-rental.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg2.ff5bc929.png&w=1080&q=75' className="glightbox">
-                                    <Image src={img3} alt='...' />
-                                    </a>
-                                    
-                                </div>
-                            </div>
-                        </Col>
-                    </Row> */}
 
                     <Gallery />
-
-
                     <Row className='gx-3'>
                         <Col lg={8}>
                             <div className='left_side'>
@@ -241,7 +213,7 @@ export default function Details() {
                                         <div>
                                             <h6>Boat Availability</h6>
                                             <Row>
-                                                <Col lg={8}>
+                                                <Col lg={12}>
                                                     <DateRange
                                                         editableDateInputs={true}
                                                         onChange={item => setState([item.selection])}
@@ -253,7 +225,7 @@ export default function Details() {
                                         </div>
 
                                     </Tab>
-                                    <Tab eventKey="tab-2" title="Add review">
+                                    <Tab eventKey="tab-2" title="Add reviews">
                                         <div className='review_box_wrap pt-4'>
                                             <h6 className='title'>Review</h6>
 
