@@ -34,7 +34,7 @@ export default function NavBar() {
                             <div className={styles.menu_wrapper}>
                                 <ul className={styles.main_menu}>
                                     <li className={styles.home}><Link className={styles.active} href="/">Home </Link></li>
-                                    <li><Link href="/browse">Yachts</Link></li>
+                                    <li><Link href="/browse">Browse</Link></li>
                                     <li><Link href="/about">About</Link></li>
                                     <li><Link href="/">Blog</Link></li>
                                     <li><Link href="/">Contact</Link></li>

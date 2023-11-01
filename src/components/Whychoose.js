@@ -9,55 +9,51 @@ import WhyChooseKey from '@/components/whychoose-key/WhyChooseKey'
 
 
 
-import { faSailboat,faShip,faFerry,faAnchor,faCompass,faWater } from '@fortawesome/free-solid-svg-icons';
-
-
 
 const keyContent = [ {
-    icon: faSailboat,
+    icon: 'fa-solid fa-sailboat',
     title: 'Sailing Overseas', 
     subTitle: 'We are proud to offer the most dynamic multifaceted marketing in the industry and all countries',
     
   },
   {
-    icon: faShip,
+    icon: 'fa-solid fa-sailboat',
     title: 'Yacht Tour', 
     subTitle: 'We are proud to offer the most dynamic multifaceted marketing in the industry and all countries',
   },
   {
-    icon: faFerry,
+    icon: 'fa-solid fa-sailboat',
     title: 'Snorkeling', 
     subTitle: 'We are proud to offer the most dynamic multifaceted marketing in the industry and all countries',
   },
   {
-    icon: faAnchor,
+    icon: 'fa-solid fa-sailboat',
     title: 'Snorkeling', 
     subTitle: 'We are proud to offer the most dynamic multifaceted marketing in the industry and all countries',
   },
   {
-    icon: faCompass,
+    icon: 'fa-solid fa-sailboat',
     title: 'Fishing', 
     subTitle: 'We are proud to offer the most dynamic multifaceted marketing in the industry and all countries',
   },
   {
-    icon: faWater,
+    icon: 'fa-solid fa-sailboat',
     title: 'Nautical Exploration', 
     subTitle: 'We are proud to offer the most dynamic multifaceted marketing in the industry and all countries',
   },
   {
-    icon: faCompass,
+    icon: 'fa-solid fa-sailboat',
     title: 'Yacht Travel', 
     subTitle: 'We are proud to offer the most dynamic multifaceted marketing in the industry and all countries',
   },
   {
-    icon: faAnchor,
+    icon: 'fa-solid fa-sailboat',
     title: 'Peoples Oriented', 
     subTitle: 'We are proud to offer the most dynamic multifaceted marketing in the industry and all countries',
   }
 
 ];
 
-console.log(keyContent)
 
 const displayedKeyContent = keyContent.slice(0, 4);
 
@@ -119,7 +115,7 @@ export default function WhyChoose (){
                                                     title={data.title} 
                                                     subtitle={data.subTitle} 
                                                     addClass={className} 
-                                                    />
+                                                />
                                             </Col>
                                         );
                                         })}

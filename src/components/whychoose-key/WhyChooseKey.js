@@ -1,6 +1,6 @@
 import styles from './WhyChooseKey.module.css'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 
 export default function WhyChooseKey({title,subtitle,icon,addClass}){
@@ -8,7 +8,8 @@ export default function WhyChooseKey({title,subtitle,icon,addClass}){
     
         <div className={`${styles.offer_key_wrap} ${addClass}`}>
             <div className={styles.icon_wrap}>
-                <FontAwesomeIcon icon={icon} />
+              
+                <i className={icon}></i>
             </div>
             <div className={styles.content_wrap}>
                 <h6 className={styles.title}>{title}</h6>

@@ -3,7 +3,7 @@
     padding: 20px 30px;
 }
 
-.offer_key_wrap .icon_wrap svg{
+.offer_key_wrap .icon_wrap i{
     font-size: 52px;
     color: hsl(var(--base));
 }
