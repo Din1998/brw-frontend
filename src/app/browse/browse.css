@@ -1,0 +1,52 @@
+.all-yachts{
+    position: relative;
+    padding: 0px 30px;
+}
+
+.filter_cta{
+    position: absolute;
+    top: 38px;
+    right: 48px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 12px;
+    z-index: 3;
+}
+.filter_cta p{
+    color: hsl(var(--black));
+}
+.filter_cta .filter_btn{
+    padding: 8px 16px;
+    background: hsl(var(--white));
+    border-radius: 4px;
+}
+
+.filter_cta .filter_btn i{
+    color: hsl(var(--base));
+}
+
+/* filter box */
+.filter_box{
+    background: hsl(var(--white));
+    border-radius: 8px;
+    padding: 30px;
+    /* display: none; */
+}
+
+.show_filter{
+    display: block;
+}
+
+.show_price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price_input_wrap{
+    display: flex;
+    flex-direction: column;
+}
+.price_input_wrap .price_input{
+    width: 63px;
+}

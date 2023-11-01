@@ -17,6 +17,7 @@
     "glightbox": "^3.2.0",
     "lightbox.js-react": "^0.9.5",
     "next": "13.5.6",
+    "rc-slider": "^10.3.1",
     "react": "^18",
     "react-bootstrap": "^2.9.1",
     "react-date-range": "^1.4.0",
