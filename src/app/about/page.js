@@ -6,6 +6,7 @@ import Testemonial from '@/components/Testemonial';
 import Explore2 from '@/components/Explore2';
 import HowWork from '@/components/Howwork';
 import Breadcrumb from '@/components/breadcrumb/breadcrumb';
+import IntroSection from "@/components/Intro";
 
 const aboutContent = [
     {
@@ -32,7 +33,6 @@ export default function About() {
 
 
             <main className="about-section">
-       
               
                     <div className='px-5'>
                         <Breadcrumb />
@@ -40,6 +40,7 @@ export default function About() {
                     <WhyChoose />
                     <HowWork />
                     <Explore2 />
+                    <IntroSection />
                     <Testemonial />
        
             </main>

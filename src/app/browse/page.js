@@ -1,5 +1,6 @@
 "use client"
 import Breadcrumb from '@/components/breadcrumb/breadcrumb';
+import MapContainer from '@/components/googleMap/googleMap';
 
 
 import { Row, Container, Col } from 'react-bootstrap';
@@ -382,7 +383,7 @@ export default function Brows() {
                     <Col lg={6}>
 
                         <div class="google-map-wrap">
-                            <iframe src="https://maps.google.com/maps?q={{ @$contact->data_values->latitude }},{{ @$contact->data_values->longitude }}&hl=es;z=14&amp;output=embed" ></iframe>
+                            <iframe src="https://maps.google.com/maps?q={{ lat:44 }},{{lon: -80 }}&hl=es;z=14&amp;output=embed" ></iframe>
                         </div>
 
                     </Col>
