@@ -31,7 +31,7 @@
     background: hsl(var(--white));
     border-radius: 8px;
     padding: 30px;
-    /* display: none; */
+    display: none;
 }
 
 .show_filter{
@@ -42,6 +42,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 }
 .price_input_wrap{
     display: flex;
@@ -49,4 +50,79 @@
 }
 .price_input_wrap .price_input{
     width: 63px;
+    padding: 6px 10px;
+}
+
+.filter_option1{
+    border: 1px solid hsl(var(--black)/.05);
+    height: 100%;
+    padding: 28px;
+}
+.filter_option2{
+    border: 1px solid hsl(var(--black)/.05);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 28px;
+}
+.filter_option3{
+    border: 1px solid hsl(var(--black)/.05);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 28px;
+}
+.filter_option4{
+    border: 1px solid hsl(var(--black)/.05);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 28px;
+}
+.filter_option5{
+    border: 1px solid hsl(var(--black)/.05);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 28px;
+}
+.filter_option6{
+    border: 1px solid hsl(var(--black)/.05);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 28px;
+}
+.filter_option7{
+    border: 1px solid hsl(var(--black)/.05);
+    height: 100%;
+    display: flex;
+    padding: 28px;
+    flex-direction: column;
+}
+/* rc range modify */
+
+.rc-slider-handle {
+    background-color: hsl(var(--base));
+    border: solid 2px hsl(var(--base));
+}
+
+.rc-slider-handle:hover {
+    border-color: hsl(var(--black)/0.1);
+}
+.rc-slider-handle:active {
+    border-color: hsl(var(--base));
+    box-shadow: 0 0 7px hsl(var(--base));
+
+}
+.rc-slider-handle-dragging.rc-slider-handle-dragging.rc-slider-handle-dragging {
+    border-color: hsl(var(--base));
+    box-shadow: 0 0 12px hsl(var(--base));
+  }
+.rc-slider-track, .rc-slider-tracks {
+    background-color: hsl(var(--base)/0.3);
+}
+
+.rc-slider-rail {
+    background-color: hsl(var(--base)/0.08);
 }
