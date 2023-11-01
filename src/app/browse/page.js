@@ -17,7 +17,7 @@ import Pagination from '@/components/pagination/pagination';
 
 import './browse.css'
 
-export default function brows() {
+export default function Brows() {
 
 
     const [className, setClassName] = useState('');
