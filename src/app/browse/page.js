@@ -15,6 +15,7 @@ import BaseCard from '@/components/baseCard/BaseCard';
 import Pagination from '@/components/pagination/pagination';
 
 import './browse.css'
+import Gmap from '@/components/googleMap/googleMap';
 
 export default function Brows() {
 
@@ -381,7 +382,7 @@ export default function Brows() {
                     <Col lg={6}>
 
                         <div class="google-map-wrap">
-                            <iframe src="https://maps.google.com/maps?q={{ lat:44 }},{{lon: -80 }}&hl=es;z=14&amp;output=embed" ></iframe>
+                           <Gmap />
                         </div>
 
                     </Col>

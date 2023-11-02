@@ -40,7 +40,7 @@ export default function NavBar2() {
                                 <div className={styles.menu_right_wrapper}>
                                     <ul>
                                         <li className={styles.login_cta}>
-                                            <Link href="/" className={styles.booknow_btn}>Book Now</Link>
+                                            <Link href="/signin" className={styles.booknow_btn}>Book Now</Link>
                                         </li>
                                     </ul>
                                 </div>

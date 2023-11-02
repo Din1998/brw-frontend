@@ -1,6 +1,7 @@
 .all-yachts{
     position: relative;
     padding: 0px 30px;
+    background: hsl(var(--black)/0.02);
 }
 
 .filter_cta{
