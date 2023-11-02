@@ -1,12 +1,19 @@
 
-
+"use client"
 import Breadcrumb2 from '@/components/breadcrumb2/breadcrumb2';
 import { Row, Container, Col } from 'react-bootstrap';
 import './contact.css'
 import Breadcrumb from '@/components/breadcrumb/breadcrumb';
 import Link from 'next/link';
 import Image from 'next/image';
+import ReactMapGL from 'react-map-gl';
 
+import 'mapbox-gl/src/css/mapbox-gl.css'
+
+
+
+
+import React from 'react';
 
 
 import img from '@/assets/image/common/contact.png'
@@ -20,6 +27,16 @@ const contactContent = [
 ];
 
 export default function Contact() {
+
+
+    const [viewport, setViewport] = React.useState({
+        width: '100%',
+        height: 400,
+        latitude: 37.7577,
+        longitude: -122.4376,
+        zoom: 8,
+      });
+    
     return (
         <>
 
@@ -37,7 +54,14 @@ export default function Contact() {
                     <Col lg={12}>
                         <Breadcrumb />
                         <div className="map_wrap">
-                            <iframe src="https://maps.google.com/maps?q={{ lat:44 }},{{lon: -80 }}&hl=es;z=14&amp;output=embed" ></iframe>
+                          
+                            <ReactMapGL
+                                {...viewport}
+                                mapboxApiAccessToken={process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN}
+
+                                onViewportChange={(nextViewport) => setViewport(nextViewport)}
+                            ></ReactMapGL>
+
                         </div>
                     </Col>
                 </Row>
