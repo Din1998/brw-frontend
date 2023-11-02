@@ -36,8 +36,7 @@ export default function NavBar() {
                                     <li className={styles.home}><Link className={styles.active} href="/">Home </Link></li>
                                     <li><Link href="/browse">Browse</Link></li>
                                     <li><Link href="/about">About</Link></li>
-                                    <li><Link href="/">Blog</Link></li>
-                                    <li><Link href="/">Contact</Link></li>
+                                    <li><Link href="/contact">Contact</Link></li>
                                 </ul>
 
                                 <div className={styles.menu_right_wrapper}>

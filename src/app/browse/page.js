@@ -1,7 +1,5 @@
 "use client"
 import Breadcrumb from '@/components/breadcrumb/breadcrumb';
-import MapContainer from '@/components/googleMap/googleMap';
-
 
 import { Row, Container, Col } from 'react-bootstrap';
 

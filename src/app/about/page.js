@@ -7,6 +7,7 @@ import Explore2 from '@/components/Explore2';
 import HowWork from '@/components/Howwork';
 import Breadcrumb from '@/components/breadcrumb/breadcrumb';
 import IntroSection from "@/components/Intro";
+import Luxury from "@/components/luxury";
 
 const aboutContent = [
     {
@@ -37,6 +38,7 @@ export default function About() {
                     <div className='px-5'>
                         <Breadcrumb />
                     </div>  
+                    <Luxury />
                     <WhyChoose />
                     <HowWork />
                     <Explore2 />
