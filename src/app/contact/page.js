@@ -6,9 +6,7 @@ import './contact.css'
 import Breadcrumb from '@/components/breadcrumb/breadcrumb';
 import Link from 'next/link';
 import Image from 'next/image';
-import ReactMapGL from 'react-map-gl';
 
-import 'mapbox-gl/src/css/mapbox-gl.css'
 
 
 
@@ -17,6 +15,7 @@ import React from 'react';
 
 
 import img from '@/assets/image/common/contact.png'
+import Gmap from '@/components/googleMap/googleMap';
 
 
 const contactContent = [
@@ -29,13 +28,7 @@ const contactContent = [
 export default function Contact() {
 
 
-    const [viewport, setViewport] = React.useState({
-        width: '100%',
-        height: 400,
-        latitude: 37.7577,
-        longitude: -122.4376,
-        zoom: 8,
-      });
+  
     
     return (
         <>
@@ -55,13 +48,7 @@ export default function Contact() {
                         <Breadcrumb />
                         <div className="map_wrap">
                           
-                            <ReactMapGL
-                                {...viewport}
-                                mapboxApiAccessToken={process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN}
-
-                                onViewportChange={(nextViewport) => setViewport(nextViewport)}
-                            ></ReactMapGL>
-
+                           <Gmap />
                         </div>
                     </Col>
                 </Row>
