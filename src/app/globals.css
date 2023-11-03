@@ -2438,9 +2438,10 @@ button:focus {
 /* login box */
 
 .login-box {
-  background: hsl(var(--white));
+  background: hsl(var(--black)/.03);
   height: 100vh;
   padding: 100px 60px;
+  border-radius: 8px;
   top: 0;
   overflow-y: hidden;
   transition: all 0.4s ease-in-out;
