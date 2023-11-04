@@ -28,7 +28,7 @@ export default function Gmap() {
   return(
 
     <>
-    <Image src={boatIcon} />
+    {/* <Image src={boatIcon} /> */}
     <Map />;
     </>
   )
@@ -55,7 +55,7 @@ function MarkerWithInfo({ position }) {
     setIsInfoOpen(!isInfoOpen);
   };
 
-  const customIcon = 'https://boat-rental.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fboaticon.3e852b6a.png&w=64&q=75';
+  const customIcon = 'https://boat-rental.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fboaticon.73f4bd80.png&w=64&q=75';
 
   
 
