@@ -1,4 +1,6 @@
 import { Row, Col, Container } from 'react-bootstrap'
+import { useEffect,useState} from "react";
+import { animateScroll as scroll } from 'react-scroll';
 import Image from 'next/image'
 import Link from 'next/link';
 import styles from './footer.module.css'
@@ -14,6 +16,30 @@ import img5 from '@/assets/image/footer/img5.png'
 import img6 from '@/assets/image/footer/img6.png'
 
 export default function Footer(){
+
+
+ // tap to top btn function
+ const [isVisible, setIsVisible] = useState(false);
+
+ const toggleVisibility = () => {
+   if (window.pageYOffset > 300) {
+     setIsVisible(true);
+   } else {
+     setIsVisible(false);
+   }
+ };
+
+ const scrollToTop = () => {
+   scroll.scrollToTop();
+ };
+ 
+ useEffect(() => {
+   window.addEventListener('scroll', toggleVisibility);
+   return () => {
+     window.removeEventListener('scroll', toggleVisibility);
+   };
+ }, []);
+
     return(
         <section className={styles.section}>
             <Container>
@@ -109,6 +135,16 @@ export default function Footer(){
                     </Col>
                 </Row>
             </Container>
+             {/* tap to top scroll  btn*/}
+            <div>
+                {isVisible && (
+                <div className="scroll-top scroll-top-button show" onClick={scrollToTop}>
+                    <svg className="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                    <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+                    </svg>
+                </div>
+                )}
+            </div>
         </section>
     )
 }

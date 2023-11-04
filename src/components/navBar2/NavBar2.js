@@ -3,23 +3,25 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Row, Container } from 'react-bootstrap';
 
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 
 import Login from '../login/login';
 import Signin from '../singnin/signin';
 
 
+import { usePathname } from 'next/navigation';
 
 import logo from '@/assets/image/logo/f-logo.png'
 
 import styles from './navBar2.module.css'
 
 export default function NavBar2() {
-
+    const path = usePathname()
     
     const [isClassNameActive, setClassNameActive] = useState(false);
 
     const [showSignin, setShowSignin] = useState(false);
+    const [headerClass, setHeaderClass] = useState('');
 
 
 
@@ -37,6 +39,35 @@ export default function NavBar2() {
     const toggleSignin = () => {
         setShowSignin(!showSignin);
       };
+
+
+      useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY >= 80) {
+                setHeaderClass('fixed-header');
+            } else {
+                setHeaderClass('');
+            }
+
+            // Apply the class to the element with id "header"
+            const header = document.querySelector('#header');
+            if (header) {
+                if (window.scrollY >= 80) {
+                    header.classList.add('fixed-header');
+                } else {
+                    header.classList.remove('fixed-header');
+                }
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+
    
 
     return (
@@ -61,10 +92,10 @@ export default function NavBar2() {
                             </div>
                             <div className={styles.menu_wrapper}>
                                 <ul className={styles.main_menu}>
-                                    <li className={styles.home}><Link className={styles.active} href="/">Home </Link></li>
-                                    <li><Link href="/browse">Browse</Link></li>
-                                    <li><Link href="/about">About</Link></li>
-                                    <li><Link href="/contact">Contact</Link></li>
+                                <li className={styles.home}><Link className={path === '/' ? styles.active : ''} href="/">Home </Link></li>
+                                    <li><Link className={path === '/browse' ? styles.active : ''} href="/browse">Browse</Link></li>
+                                    <li><Link className={path === '/about' ? styles.active : ''} href="/about">About</Link></li>
+                                    <li><Link className={path === '/contact' ? styles.active : ''} href="/contact">Contact</Link></li>
                                 </ul>
 
                                 <div className={styles.menu_right_wrapper}>
