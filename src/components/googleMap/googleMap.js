@@ -4,6 +4,10 @@
 import { GoogleMap, useLoadScript, MarkerF, InfoWindow } from '@react-google-maps/api';
 import { useMemo, useState } from 'react';
 
+import Image from 'next/image';
+
+import boatImg from '@/assets/image/product/img4.png'
+
 const markerPositions = [
   { lat: 44.123, lng: -80.456 },
   { lat: 44.234, lng: -80.567 },
@@ -19,7 +23,13 @@ export default function Gmap() {
 
   if (!isLoaded) return <div>Loading.....</div>;
 
-  return <Map />;
+  return(
+
+    <>
+    
+    <Map />;
+    </>
+  )
 }
 
 function Map() {
@@ -43,7 +53,9 @@ function MarkerWithInfo({ position }) {
     setIsInfoOpen(!isInfoOpen);
   };
 
-  const customIcon = 'https://cdn-icons-png.flaticon.com/512/535/535239.png';
+  const customIcon = 'https://boat-rental.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fboaticon.3e852b6a.png&w=64&q=75';
+
+  
 
   return (
     <MarkerF
@@ -54,12 +66,18 @@ function MarkerWithInfo({ position }) {
         scaledSize: new window.google.maps.Size(30, 30), 
       }}
     >
+
       {isInfoOpen && (
         <InfoWindow onCloseClick={toggleInfoWindow}>
           <div className='boat_info'>
-            <div><h6>Yachts Camille</h6></div>
-            <div><p>8 guest,events in como </p></div>
-            <div><p>5.0</p></div>
+            <div className='thumb_wrap'>
+              <Image src={boatImg} alt='..'/>
+            </div>
+            <div className='content_wrap'>
+              <h6 className='title'>Yachts Camille</h6>
+              <p className='location'><i class="fa-solid fa-location-dot"></i>   2066 Leo Street</p>
+              
+            </div>
           </div>
         </InfoWindow>
       )}

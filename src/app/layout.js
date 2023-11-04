@@ -16,7 +16,7 @@ const roboto = Roboto({ subsets: ['latin'],weight: ["400", "500", "700", "900"]}
 
 
 
-export default function RootLayout({ children,page }) {
+export default function RootLayout({ children }) {
 
   const isHomeRoute = usePathname();
   return (
@@ -26,6 +26,7 @@ export default function RootLayout({ children,page }) {
     
       </Head>
       <body className={roboto.className}>
+
       {isHomeRoute === '/' ? (
         <NavBar />
       ) : (

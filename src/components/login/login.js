@@ -1,12 +1,17 @@
-
+import { useState } from 'react';
 import Link from "next/link";
 
-export default function Login(){
+export default function Login({isClassNameActive,toggleSignin}){
+
+
+
+
+
   return(
    
-            
+            <>
 
-            <div className="login-box">
+    <div className={`login-box ${isClassNameActive ? 'show' : ''}`}>
         <div className="close--btn">
             <div className="wrap">
                 <a href="index.html" ><i className="fa-solid fa-xmark"></i></a>
@@ -38,7 +43,7 @@ export default function Login(){
                 <p>I agree with Company, <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a></p>
             </div>
         </div>
-        <button className="btn btn--base w-100">Sign Up</button>
+        <button className="btn__base w-100">Sign Up</button>
         <div className="social-option">
             <div className="text">
                 <h6>or</h6>
@@ -48,9 +53,12 @@ export default function Login(){
             <li><a href="#"><i className="fa-brands fa-google"></i></a></li>
             <li><a href="#"><i className="fa-brands fa-twitter"></i></a></li>
             </ul>
-            <p> Already have an account ? <Link href='/login'>Log In</Link></p>
+            <p> Already have an account ? <button className="login" onClick={toggleSignin}>Log In</button></p>
         </div>
-    </div>
-           
+    </div>   
+
+
+    </>
+    
   )
 }

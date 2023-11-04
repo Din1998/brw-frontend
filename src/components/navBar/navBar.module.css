@@ -733,6 +733,7 @@
     right: 0;
     transition: 0.3s linear;
     padding-top: 0;
+    z-index: 999;
 }
 
 .header-top {
@@ -975,4 +976,26 @@ li.login_registration_list__item .social-list__item .social-list__link i {
     .menu_wrapper {
         display: none;
     }
+}
+
+
+
+/* sidebar overlay */
+
+.sidebar_overlay {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.87);
+    z-index: 12;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s linear;
+    top: 0;
+    left: 0;
+}
+
+.sidebar_overlay.show {
+    visibility: visible;
+    opacity: 1;
 }
