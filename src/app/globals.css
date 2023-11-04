@@ -2963,7 +2963,7 @@ svg path {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: hsl(var(--base)/0.09);
+  background: hsl(var(--base)/0.8);
 }
 .sidebar-menu__close:hover, .sidebar-menu__close:focus {
   background-color: hsl(var(--base));
