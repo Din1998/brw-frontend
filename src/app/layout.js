@@ -9,7 +9,7 @@ import NavBar2 from '@/components/navBar2/NavBar2';
 import Footer from '@/components/footer/Footer';
 
 import { usePathname } from 'next/navigation'
-import Head from 'next/head';
+
 
 
 const roboto = Roboto({ subsets: ['latin'],weight: ["400", "500", "700", "900"]})
@@ -22,9 +22,7 @@ export default function RootLayout({ children }) {
   return (
 
     <html lang="en">
-      <Head>
-    
-      </Head>
+      
       <body className={roboto.className}>
 
       {isHomeRoute === '/' ? (

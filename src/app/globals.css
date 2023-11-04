@@ -2762,10 +2762,5 @@ button:focus {
 }
 
 .gm-ui-hover-effect{
-    background: hsl(var(--base)) !important;
-    border-radius: 4px !important;
-    top: 0px !important;
-    right: -1px !important;
-    width: 29px !important;
-    height: 28px !important;
+    display: none !important;
 }

@@ -63,7 +63,7 @@ export default function NavBar() {
                     <Row>
                         <div className={styles.header_wrapper}>
                             {/* <i className={fa-sharp fa-solid fa-bars-staggered ham__menu} data-bs-toggle="offcanvas"
-            data-bs-target={#offcanvasExample} aria-controls="offcanvasExample"></i> */}
+                            data-bs-target={#offcanvasExample} aria-controls="offcanvasExample"></i> */}
 
 
                             <div className={styles.header_menu_wrapper}>
