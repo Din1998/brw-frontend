@@ -959,11 +959,11 @@ li.login_registration_list__item .social-list__item .social-list__link i {
 
 .booknow_btn{
     display: block;
-    border: 1px solid hsl(var(--white));
     border-radius: 12px;
-    padding: 14px 38px;
+    padding: 12px 24px;
     text-align: center;
     color: hsl(var(--white));
+    background: hsl(var(--base));
 }
 
 

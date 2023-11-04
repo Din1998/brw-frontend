@@ -18,6 +18,8 @@ import Pagination from '@/components/pagination/pagination';
 import './browse.css'
 import Breadcrumb2 from '@/components/breadcrumb2/breadcrumb2';
 import Breadcrumb from '@/components/breadcrumb/breadcrumb';
+import NavBar from '@/components/navBar/NavBar';
+import Footer from '@/components/footer/Footer';
 
 
 
@@ -56,6 +58,7 @@ export default function Brows() {
 
     return (
         <>
+        <NavBar />
             {/* breadcrumb */}
 
             <div>
@@ -422,6 +425,8 @@ export default function Brows() {
                 </Container>
 
             </section>
+
+            <Footer />
         </>
 
     )

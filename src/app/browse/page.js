@@ -16,6 +16,8 @@ import Pagination from '@/components/pagination/pagination';
 
 import './browse.css'
 import Gmap from '@/components/googleMap/googleMap';
+import NavBar2 from '@/components/navBar2/NavBar2';
+import Footer from '@/components/footer/Footer';
 
 export default function Brows() {
 
@@ -40,6 +42,10 @@ export default function Brows() {
     };
 
     return (
+        <>
+
+        <NavBar2 />
+      
         <section className="all-yachts">
 
             {/* container start */}
@@ -397,5 +403,8 @@ export default function Brows() {
             </Container>
 
         </section>
+        <Footer />
+        
+        </>
     )
 }

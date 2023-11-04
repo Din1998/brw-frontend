@@ -16,6 +16,8 @@ import React from 'react';
 
 import img from '@/assets/image/common/contact.png'
 import Gmap from '@/components/googleMap/googleMap';
+import NavBar2 from '@/components/navBar2/NavBar2';
+import Footer from '@/components/footer/Footer';
 
 
 const contactContent = [
@@ -32,6 +34,8 @@ export default function Contact() {
     
     return (
         <>
+
+        <NavBar2 />
 
             {/* page banner */}
             <div>
@@ -127,7 +131,7 @@ export default function Contact() {
                 
             </Container>
 
-
+        <Footer />
         </>
     )
 }

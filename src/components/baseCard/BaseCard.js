@@ -15,8 +15,8 @@ export default function BaseCard(){
      
       <div className={styles.option_wrap}>
         <ul>
-          <li>5Star</li>
-          <li>3Cabin</li>
+          <li>5 Star</li>
+          <li>3 Cabin</li>
           <li>19 People</li>
           <li>30”ft</li>
         </ul>

@@ -1,4 +1,5 @@
 
+"use client"
 
 import Breadcrumb2 from "@/components/breadcrumb2/breadcrumb2";
 import WhyChoose from '@/components/Whychoose';
@@ -8,6 +9,8 @@ import HowWork from '@/components/Howwork';
 import Breadcrumb from '@/components/breadcrumb/breadcrumb';
 import IntroSection from "@/components/Intro";
 import Luxury from "@/components/luxury";
+import Footer from "@/components/footer/Footer";
+import NavBar2 from "@/components/navBar2/NavBar2";
 
 const aboutContent = [
     {
@@ -21,6 +24,7 @@ export default function About() {
 
     return (
         <>
+        <NavBar2 />
             {/* page banner */}
             <div>
                 {aboutContent.map((data, index) => (
@@ -46,6 +50,8 @@ export default function About() {
                     <Testemonial />
        
             </main>
+
+            <Footer />
         </>
 
     )
