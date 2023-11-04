@@ -296,8 +296,8 @@ export default function Details() {
                                             <h6 className='mb-4'>Add Extra Services <span>(optional)</span></h6>
                                             <div className='extra_item mb-2'>
                                                 <div class="form_check mb-20">
-                                                    <input class="form_check_input" name="categories" type="checkbox" value="1" id="categories" />
-                                                    <label class="form_check_label" for="chekbox-0">
+                                                    <input class="form-check-input" name="categories" type="checkbox" value="1" id="categories" />
+                                                    <label class="form-check-label" for="chekbox-0">
                                                         Safety net
                                                     </label>
                                                 </div>
@@ -305,8 +305,8 @@ export default function Details() {
                                             </div>
                                             <div className='extra_item mb-2'>
                                                 <div class="form_check mb-20">
-                                                    <input class="form_check_input" name="categories" type="checkbox" value="1" id="categories" />
-                                                    <label class="form_check_label" for="chekbox-0">
+                                                    <input class="form-check-input" name="categories" type="checkbox" value="1" id="categories" />
+                                                    <label class="form-check-label" for="chekbox-0">
                                                         Crew change
                                                     </label>
                                                 </div>
@@ -314,8 +314,8 @@ export default function Details() {
                                             </div>
                                             <div className='extra_item mb-2'>
                                                 <div class="form_check mb-20">
-                                                    <input class="form_check_input" name="categories" type="checkbox" value="1" id="categories" />
-                                                    <label class="form_check_label" for="chekbox-0">
+                                                    <input class="form-check-input" name="categories" type="checkbox" value="1" id="categories" />
+                                                    <label class="form-check-label" for="chekbox-0">
                                                         Kayak
                                                     </label>
                                                 </div>
@@ -323,8 +323,8 @@ export default function Details() {
                                             </div>
                                             <div className='extra_item mb-2'>
                                                 <div class="form_check mb-20">
-                                                    <input class="form_check_input" name="categories" type="checkbox" value="1" id="categories" />
-                                                    <label class="form_check_label" for="chekbox-0">
+                                                    <input class="form-check-input" name="categories" type="checkbox" value="1" id="categories" />
+                                                    <label class="form-check-label" for="chekbox-0">
                                                         Extra bed
                                                     </label>
                                                 </div>
