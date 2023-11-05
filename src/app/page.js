@@ -1,7 +1,7 @@
 "use client"
 import Explore from '@/components/explore'
 import styles from './page.module.css'
-import Hero from '@/components/section-layout/hero/Hero'
+
 import Offer from '@/components/section-layout/offer/Offer'
 import GallerySection from '@/components/Gallerysection'
 import WhyChoose from '@/components/Whychoose'
@@ -13,6 +13,11 @@ import Sponsor from '@/components/Sponsor'
 import NavBar from '@/components/navBar/NavBar'
 import Footer from '@/components/footer/Footer'
 
+
+import dynamic from 'next/dynamic';
+
+
+const Hero = dynamic(() => import('@/components/section-layout/hero/Hero'),{ssr:false})
 
 
 export default function Home() {
