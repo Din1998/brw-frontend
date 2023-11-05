@@ -1,5 +1,9 @@
 import { useState } from 'react';
 
+import logo from '@/assets/image/logo/f-logo.png'
+import Image from 'next/image';
+import Link from 'next/link';
+
 export default function LeftSideBar() {
     
     const [isOpen1, setIsOpen1] = useState(false);
@@ -39,33 +43,21 @@ export default function LeftSideBar() {
                 <div className="dashboard_profile__details">
                     <div className="sidebar-menu">
                         <span className="sidebar-menu__close"><i className="las la-times"></i></span>
-                        <div className="logo-wrapper px-3">
-                            <a href="index.html" className="normal-logo" id="normal-logo"> <img src="assets/images/logo/logo.png" alt="" /></a>
-                            <a href="index.html" className="dark-logo hidden" id="dark-logo"> <img src="assets/images/logo/dark-logo.png" alt="" /></a>
+                        <div className="logo-wrapper">
+                            <Link href="/" className="sidebar_logo"><Image src={logo} alt='...' /></Link>
+                           
                         </div>
                         <ul className="sidebar-menu-list">
                             
-                            <li className={isOpen1 ? "openSubmenu": 'sidebar-menu-list__item'}>
-                                <div className="sidebar-menu-list__link has-dropdown" onClick={() => toggleMenu(1)}>
-                                    <span className="icon"><i class="fa-regular fa-user"></i></span>
-                                    <span className="text">Profile</span>
-                                </div>
-                                <div className='sidebar-submenu'>
-                                    <ul className="sidebar-submenu-list">
-                                        <li className="sidebar-submenu-list__item active">
-                                            <a href="all-exchange.html" className="sidebar-submenu-list__link">All Exchange</a>
-                                        </li>
-                                        <li className="sidebar-submenu-list__item">
-                                            <a href="all-exchange.html" className="sidebar-submenu-list__link">Approved Exchange</a>
-                                        </li>
-                                        <li className="sidebar-submenu-list__item active">
-                                            <a href="all-exchange.html" className="sidebar-submenu-list__link">Refunded Exchange</a>
-                                        </li>
-                                        <li className="sidebar-submenu-list__item">
-                                            <a href="all-exchange.html" className="sidebar-submenu-list__link">Canceled Exchange</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                            <li className={isOpen1 ? "openSubmenu": 'sidebar-menu-list__item openSubmenu'}>
+                                <Link href='/dashboard'>
+                                    <div className="sidebar-menu-list__link has-dropdown" onClick={() => toggleMenu(1)}>
+                                        <span className="icon"><i class="fa-regular fa-user"></i></span>
+                                        <span className="text">Profile</span>
+                                    </div>
+                                </Link>
+                                
+                                
                             </li>
 
                             <li className={isOpen2 ? "openSubmenu": 'sidebar-menu-list__item'}>
@@ -77,17 +69,14 @@ export default function LeftSideBar() {
                                 <div className='sidebar-submenu'>
                                     <ul className="sidebar-submenu-list">
                                         <li className="sidebar-submenu-list__item active">
-                                            <a href="all-exchange.html" className="sidebar-submenu-list__link">All Exchange</a>
+                                            <Link href='/dashboard/calender' className="sidebar-submenu-list__link">Calendar</Link>
+                                            
                                         </li>
                                         <li className="sidebar-submenu-list__item">
-                                            <a href="all-exchange.html" className="sidebar-submenu-list__link">Approved Exchange</a>
+                                            <Link href='/dashboard/details' className="sidebar-submenu-list__link">Account Details</Link>
+                                       
                                         </li>
-                                        <li className="sidebar-submenu-list__item active">
-                                            <a href="all-exchange.html" className="sidebar-submenu-list__link">Refunded Exchange</a>
-                                        </li>
-                                        <li className="sidebar-submenu-list__item">
-                                            <a href="all-exchange.html" className="sidebar-submenu-list__link">Canceled Exchange</a>
-                                        </li>
+                                       
                                     </ul>
                                 </div>
                             </li>
@@ -101,16 +90,10 @@ export default function LeftSideBar() {
                                 <div className='sidebar-submenu'>
                                     <ul className="sidebar-submenu-list">
                                         <li className="sidebar-submenu-list__item active">
-                                            <a href="all-exchange.html" className="sidebar-submenu-list__link">All Exchange</a>
+                                            <Link href='/dashboard/allboats' className="sidebar-submenu-list__link">All Boat</Link>
                                         </li>
                                         <li className="sidebar-submenu-list__item">
-                                            <a href="all-exchange.html" className="sidebar-submenu-list__link">Approved Exchange</a>
-                                        </li>
-                                        <li className="sidebar-submenu-list__item active">
-                                            <a href="all-exchange.html" className="sidebar-submenu-list__link">Refunded Exchange</a>
-                                        </li>
-                                        <li className="sidebar-submenu-list__item">
-                                            <a href="all-exchange.html" className="sidebar-submenu-list__link">Canceled Exchange</a>
+                                        <Link href='/dashboard/addboat' className="sidebar-submenu-list__link">Add Boat</Link>
                                         </li>
                                     </ul>
                                 </div>

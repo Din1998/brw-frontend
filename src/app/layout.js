@@ -2,6 +2,7 @@
 import { Roboto} from 'next/font/google'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './fontawesome-all.min.css'
+import 'animate.css';
 import './globals.css'
 
 

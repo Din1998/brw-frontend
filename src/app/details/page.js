@@ -12,10 +12,7 @@ import 'glightbox/dist/css/glightbox.css';
 
 import './yachts.css'
 
-import img1 from '@/assets/image/product/img2.png'
-import img2 from '@/assets/image/product/img3.png'
-import img3 from '@/assets/image/product/img4.png'
-import img4 from '@/assets/image/product/img1.png'
+
 import img5 from '@/assets/image/product/img5.png'
 
 
@@ -33,7 +30,7 @@ import Link from 'next/link';
 import { DateRange } from 'react-date-range';
 
 
-import React, { useState,useEffect,useRef  } from 'react'
+import React, { useState } from 'react'
 
 import dynamic from 'next/dynamic';
 import NavBar2 from '@/components/navBar2/NavBar2';

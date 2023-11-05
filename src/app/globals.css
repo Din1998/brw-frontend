@@ -47,6 +47,11 @@
     --base-s: 100%;
     --base-l: 50%;
     --base: var(--base-h) var( --base-s) var(--base-l);
+    /*========================= Base Color2 =============================*/
+    --base-h2: 179;
+    --base-s2: 96%;
+    --base-l2: 33%;
+    --base-2: var(--base-h2) var( --base-s2) var(--base-l2);
   /*== Base Darken ==*/
     --base-d-100: var(--base-h) var(--base-s) calc(var(--base-l) - var(--base-l) * 0.1);
     --base-d-200: var(--base-h) var(--base-s) calc(var(--base-l) - var(--base-l) * 0.2);
@@ -1707,27 +1712,27 @@ input[type=number] {
   }
 }
 /*==========  Custom Radion Design ============*/
-.form_radio .form_check_input {
+.form-radio .form-check-input {
   box-shadow: none;
   border: 2px solid hsl(var(--base));
   position: relative;
   margin-right: 10px;
 }
 
-.form_radio .form_check_input:active {
+.form-radio .form-check-input:active {
   filter: brightness(100%);
 }
 
-.form_radio .form_check_input:checked {
+.form-radio .form-check-input:checked {
   background-color: transparent;
   border-color: hsl(var(--base));
 }
 
-.form_radio .form_check_input:checked[type=radio] {
+.form-radio .form-check-input:checked[type=radio] {
   background-image: none;
 }
 
-.form_radio .form_check_input:checked::before {
+.form-radio .form-check-input:checked::before {
   position: absolute;
   content: "";
   top: 50%;
@@ -1742,56 +1747,58 @@ input[type=number] {
 }
 
 /*  Custom Switch Design */
-.form_switch .form_check_input {
+.form-switch .form-check-input {
   width: unset;
-  border-radius: 3px;
+  border-radius: 12px;
   background-image: none;
   position: relative;
   box-shadow: none;
   border: 0;
-  background-color: hsl(var(--base-two)/0.5) !important;
+  background-color: hsl(var(--white)) !important;
   padding: 12px 30px !important;
   margin-left: 0;
   margin-bottom: 5px;
+  border: 1px solid hsl(var(--base-2));
 }
 
-.form_switch .form_check_input:focus {
+.form-switch .form-check-input:focus {
   width: unset;
-  border-radius: 3px;
+  border-radius: 12px;
   background-image: none;
   position: relative;
   box-shadow: none;
   border: 0;
+  border: 1px solid hsl(var(--base-2));
 }
 
-.form_switch .form_check_input::before {
+.form-switch .form-check-input::before {
   position: absolute;
   content: "";
   width: 20px;
-  height: 15px;
-  background-color: hsl(var(--base-two));
+  height: 20px;
+  background-color: hsl(var(--base-2));
   top: 50%;
   transform: translateY(-50%);
-  border-radius: 2px;
+  border-radius: 50%;
   left: 5px;
   transition: 0.2s linear;
 }
 
-.form_switch .form_check_input:checked {
+.form-switch .form-check-input:checked {
   background-color: hsl(var(--base));
 }
 
-.form_switch .form_check_input:checked::before {
+.form-switch .form-check-input:checked::before {
   left: calc(100% - 25px);
 }
 
-.form_check.form_switch {
+.form-check.form-switch {
   display: flex;
   flex-wrap: wrap;
   padding-left: 10px;
 }
 
-.form_check.form_switch .form_check_label {
+.form-check.form-switch .form-check-label {
   margin-right: 10px;
   color: hsl(var(--white));
   font-weight: 500;
@@ -1867,6 +1874,19 @@ button:focus {
   transition: 0.5s;
   overflow: hidden;
   background: hsl(var(--base));
+}
+
+.danger{
+  background: hsl(var(--danger)) !important;
+  border: none !important;
+}
+.black{
+  background: hsl(var(--black)) !important;
+  border: none !important;
+}
+.base-2{
+  background: hsl(var(--base-2)) !important;
+  border: none !important;
 }
 
 .btn__base2 {
@@ -2834,14 +2854,14 @@ button:focus {
   
 
 
-svg {
+.scroll-top svg {
   color: hsl(var(--base));
   border-radius: 50%;
   background: hsl(var(--white));
     
 }
 
-svg path {
+.scroll-top svg path {
   fill: none;
 }
 
@@ -2868,6 +2888,50 @@ svg path {
     bottom: 70px;
   }
 
+}
+/* date range custom design */
+.rdrDayStartOfMonth .rdrInRange, .rdrDayStartOfMonth .rdrEndEdge, .rdrDayStartOfWeek .rdrInRange, .rdrDayStartOfWeek .rdrEndEdge {
+  background: hsl(var(--base)) ;
+}
+.rdrSelected, .rdrInRange, .rdrStartEdge, .rdrEndEdge {
+  background: hsl(var(--base)) !important;
+}
+.rdrDateDisplayWrapper {
+  background-color: hsl(var(--base-2)/0.6) !important;
+}
+.rdrMonthAndYearPickers select:hover {
+  background: hsl(var(--base)/0.3) !important;
+}
+.rdrNextPrevButton {
+  display: block;
+  width: 34px !important;
+  height: 34px !important;
+  margin: 0 0.833em;
+  padding: 0;
+  border: 0;
+  border-radius: 5px;
+  background: hsl(var(--base-2)/0.5) !important;
+}
+.rdrPprevButton i {
+  border-color: transparent rgb(0, 0, 0) transparent transparent !important;
+ 
+}
+.rdrNextButton i {
+  margin: 0 0 0 12px !important;
+  border-color: transparent transparent transparent rgb(0, 0, 0)  !important;
+}
+
+.rdrDay {
+  background: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: 0;
+  padding: 0;
+  line-height: 3.000em;
+  height: 70px !important;
+  text-align: center;
+  color: #1d2429;
 }
 
 
@@ -2901,7 +2965,13 @@ svg path {
   box-shadow: 0px 1px 5px rgba(1, 9, 17, 0.14);
   border-radius: 4px;
 }
-
+.sidebar-menu .logo-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
 .sidebar-menu.show-sidebar {
   transform: translateX(0);
   background-color: hsl(var(--white));
@@ -2973,6 +3043,9 @@ svg path {
 
 .sidebar-menu-list {
   padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .sidebar-menu-list__item:nth-child(5) {
@@ -3076,4 +3149,117 @@ svg path {
   display: block;
   color: hsl(var(--black));
   border-bottom: 0 !important;
+}
+
+
+/* dashboard header */
+.dashboardHeader{
+  background: hsl(var( --white));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-left: 300px;
+  border-radius: 8px;
+  height: 60px;
+}
+.dashboardHeader .route_name .name{
+  margin: 0px;
+}
+
+.dashboardHeader .item_wrapper{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.dashboardHeader .item_wrapper .items li i{
+  color: hsl(var(--base-2));
+  font-size: 22px;
+}
+.dashboardHeader .item_wrapper .items li .message_icon{
+  position: relative;
+}
+.dashboardHeader .item_wrapper .items li .message_icon::after{
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: -4px;
+  height: 10px;
+  width: 10px;
+  border: 1px solid hsl(var(--white));
+  border-radius: 50%;
+  background: hsl(var(--danger));
+}
+.dashboardHeader .item_wrapper .user_thumb{
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.dashboardHeader .item_wrapper .user_thumb img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dashboardHeader .item_wrapper .items{
+  display: flex;
+  gap: 20px;
+}
+/* dashboard layout */
+.dashboard_layout{
+  padding: 20px;
+  background: hsl(var(--black)/0.03);
+  width: 100%;
+  height: 100vh;
+}
+.dashboard_section{
+  margin-left: 300px;
+}
+
+
+
+/* base card design */
+.base_card{
+  background: hsl(var(--white));
+  border-radius: 8px;
+  padding: 24px;
+}
+
+/* dashboard profile wrap */
+
+.user_profile_wrap .profile_thumb{
+  margin-bottom: 36px;
+}
+
+.base_card .user_cta{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.base_card .user_cta h6{
+  margin-bottom: 0px;
+}
+
+/* modal */
+
+.coustom_modal .modal-dialog .modal-content .modal-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.coustom_modal .modal-dialog .modal-content .modal-body .title{
+  text-align: center;
+}
+.coustom_modal .modal-dialog .modal-content .modal-body .btn_wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.modal-backdrop {
+  --bs-backdrop-opacity: 0.8 !important;
+
 }
