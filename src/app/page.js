@@ -12,12 +12,13 @@ import Testemonial from '@/components/Testemonial'
 import Sponsor from '@/components/Sponsor'
 import NavBar from '@/components/navBar/NavBar'
 import Footer from '@/components/footer/Footer'
+import Hero from '@/components/section-layout/hero/Hero'
 
 
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 
 
-const Hero = dynamic(() => import('@/components/section-layout/hero/Hero'),{ssr:false})
+// const Hero = dynamic(() => import('@/components/section-layout/hero/Hero'),{ssr:false})
 
 
 export default function Home() {
