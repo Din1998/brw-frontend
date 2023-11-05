@@ -3,11 +3,11 @@ import Image from "next/image";
 import userImg from '@/assets/image/user/user2.png'
 import Link from "next/link";
 
-export default function DashboardHeader(){
+export default function DashboardHeader({ routeName }){
     return(
         <div className="dashboardHeader">
             <div className="route_name">
-                <h6 className="name">Profile</h6>
+                <h6 className="name">{routeName}</h6>
             </div>
             <div className="item_wrapper">
                 <ul className="items">
