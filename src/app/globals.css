@@ -1717,6 +1717,8 @@ input[type=number] {
   border: 2px solid hsl(var(--base));
   position: relative;
   margin-right: 10px;
+  width: 24px;
+  height: 24px;
 }
 
 .form-radio .form-check-input:active {
@@ -1727,7 +1729,9 @@ input[type=number] {
   background-color: transparent;
   border-color: hsl(var(--base));
 }
-
+.form-radio .form-check-input[type=radio] {
+  border-radius: 50% !important;
+}
 .form-radio .form-check-input:checked[type=radio] {
   background-image: none;
 }
@@ -1739,8 +1743,8 @@ input[type=number] {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  width: 7px;
-  height: 7px;
+  width: 10px;
+  height: 10px;
   background-color: hsl(var(--base));
   border-radius: 50%;
   z-index: 999;
@@ -2325,14 +2329,15 @@ button:focus {
   color: hsl(var(--base));
   background: hsl(var(--white));
 }
-/* 
-.nav-justified .nav-item, .nav-justified>.nav-link {
-  flex-basis: 0;
-  flex-grow: 0;
-  text-align: center;
-  width: 120px !important;
-} */
 
+.nav-link {
+  color: hsl(var(--black)/0.5);
+  transition: none;
+}
+
+.nav-link:focus, .nav-link:hover {
+  color: hsl(var(--base));
+}
 
 /* google map */
 .google-map-wrap{
@@ -3257,9 +3262,113 @@ button:focus {
   justify-content: center;
   align-items: center;
 }
-
-
 .modal-backdrop {
   --bs-backdrop-opacity: 0.8 !important;
 
 }
+
+
+
+/* dashboard boat details page */
+.dashboard_boatdetails_wrap {
+  position: relative;
+  background: hsl(var(--white));
+  border-radius: 8px;
+  overflow: hidden;
+}
+.dashboard_boatdetails_wrap .thumb{
+  width: 100%;
+  height: 230px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.dashboard_boatdetails_wrap .thumb img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.dashboard_boatdetails_wrap .board_meta_info {
+  position: relative;
+}
+.dashboard_boatdetails_wrap .board_meta_info{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 20px;
+}
+.dashboard_boatdetails_wrap .board_meta_info .thumb2{
+  position: absolute;
+  top: -40px;
+  left: 50px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid hsl(var(--white));
+}
+.dashboard_boatdetails_wrap .board_meta_info .thumb2 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.dashboard_boatdetails_wrap .board_meta_info .price_section h6{
+  margin: 0px;
+}
+.dashboard_boatdetails_wrap .board_meta_info .price_section h6 span{
+ color: hsl(var( --black)/0.5);
+}
+.dashboard_boatdetails_wrap .board_meta_info .info_section .content_wrap{
+  margin-left: 110px;
+}
+.dashboard_boatdetails_wrap .board_meta_info .info_section .content_wrap .status_tag{
+  background: hsl(var(--base));
+  padding: 0px 4px;
+  border-radius: 4px;
+}
+.dashboard_boatdetails_wrap .board_meta_info .info_section .content_wrap .status_tag p{
+  color: hsl(var(--white));
+}
+
+.dashboard_boatdetails_wrap .board_meta_info .info_section .content_wrap .title{
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 2.4;
+  margin: 0px;
+}
+
+.dashboard_boatdetails_wrap .board_meta_info .info_section .content_wrap .info_item_wrap{
+  display: flex;
+  gap: 16px;
+}
+.dashboard_boatdetails_wrap .board_meta_info .info_section .content_wrap .info_item_wrap li{
+  position: relative;
+  color: hsl(var(--black)/0.5);
+}
+
+.dashboard_boatdetails_wrap .board_meta_info .info_section .content_wrap .info_item_wrap li::after{
+ content: "";
+ position: absolute;
+ top: 6px;
+ right: -8px;
+ height: 10px;
+ width: 1px;
+ background: hsl(var( --black)/0.5);
+}
+.dashboard_boatdetails_wrap .board_meta_info .info_section .content_wrap .info_item_wrap li:last-child::after{
+  content: none;
+ }
+
+ .dashboard_boatdetails_wrap .others_info{
+  padding: 20px;
+ }
+ .dashboard_boatdetails_wrap .others_info li{
+  border-top: 1px solid hsl(var(--black)/.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0px;
+ }
+ .dashboard_boatdetails_wrap .others_info:last-child{
+  padding-bottom: 0px;
+ }

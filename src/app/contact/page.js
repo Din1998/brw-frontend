@@ -111,7 +111,7 @@ export default function Contact() {
                                             </div>
                                         </Col>
                                     </Row>
-                                    <div className='form_group mb-4'>
+                                    <div className='form_group form-radio mb-4'>
                                         <label className='mb-3'>Message</label>
                                         <textarea className='form_control' />
                                     </div>

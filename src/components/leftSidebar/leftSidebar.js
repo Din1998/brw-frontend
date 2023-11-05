@@ -73,7 +73,7 @@ export default function LeftSideBar() {
                                             
                                         </li>
                                         <li className="sidebar-submenu-list__item">
-                                            <Link href='/dashboard/details' className="sidebar-submenu-list__link">Account Details</Link>
+                                            <Link href='/dashboard/profiledetails' className="sidebar-submenu-list__link">Account Details</Link>
                                        
                                         </li>
                                        

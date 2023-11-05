@@ -7,6 +7,7 @@ import img from '@/assets/image/product/img10.png'
 
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 
 
@@ -21,7 +22,8 @@ export default function DashboardProductCard({showModal}){
             </div>
             <div className={styles.content_wrap}>
                 <div className={styles.title}>
-                    <h6>CROSS OCEAN YACHT</h6>
+                    <Link href='/dashboard/boatdetails'><h6>CROSS OCEAN YACHT</h6></Link>
+                    
                 </div>  
                 <div className={styles.user_cta}>
                     <div className={styles.btn_group}>

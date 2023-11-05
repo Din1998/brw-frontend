@@ -17,18 +17,18 @@ export default function Hero() {
                     <Col lg={6}>
                         <div className={styles.hero_item_wrap}>
                             <div className={styles.hero_content}>
-                            <RevealWrapper delay={100}>
+                            <RevealWrapper origin='bottom' delay={100}>
                             <h1 className={styles.hero_title}>We Charter Professionally Luxury Yachts</h1>
                             </RevealWrapper>
                                 
-                            <RevealWrapper delay={200}>
+                            <RevealWrapper origin='bottom' delay={200}>
                                 <p className={styles.hero_subtitle}>We do our best to make your sailing experience one of the most
                                         memorable in your life.</p>
                             </RevealWrapper>
                                 
                             </div>
                             <div className={styles.hero_search_box}>
-                            <RevealWrapper delay={300}>
+                            <RevealWrapper origin='bottom' delay={300}>
                                 <div className={styles.hero_search_wrap}>
                                     <form>
                                         <input className={styles.hero_input} placeholder='Where are you going?'/>
