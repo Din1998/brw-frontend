@@ -3069,7 +3069,7 @@ button:focus {
   border-bottom: 1px solid hsl(var(--black)/0.08);
 } */
 
-.sidebar-menu-list__item:hover {
+.sidebar-menu-list__link:hover {
   background-color: hsl(var(--black)/0.08);
   color: hsl(var(--white));
   border-radius: 6px;
