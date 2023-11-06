@@ -108,51 +108,30 @@ export default function LeftSideBar() {
                                 <div className='sidebar-submenu'>
                                     <ul className="sidebar-submenu-list">
                                         <li className="sidebar-submenu-list__item active">
-                                            <a href="all-exchange.html" className="sidebar-submenu-list__link">All Exchange</a>
+                                            <Link href='/dashboard/reservations' className="sidebar-submenu-list__link">All reservations</Link>
                                         </li>
-                                        <li className="sidebar-submenu-list__item">
-                                            <a href="all-exchange.html" className="sidebar-submenu-list__link">Approved Exchange</a>
-                                        </li>
-                                        <li className="sidebar-submenu-list__item active">
-                                            <a href="all-exchange.html" className="sidebar-submenu-list__link">Refunded Exchange</a>
-                                        </li>
-                                        <li className="sidebar-submenu-list__item">
-                                            <a href="all-exchange.html" className="sidebar-submenu-list__link">Canceled Exchange</a>
-                                        </li>
+                                        
                                     </ul>
                                 </div>
                             </li>
 
                             <li className={isOpen5 ? "openSubmenu": 'sidebar-menu-list__item'}>
-                                <div className="sidebar-menu-list__link has-dropdown" onClick={() => toggleMenu(5)}>
-                                    <span className="icon"><i class="fa-solid fa-timeline"></i></span>
-                                    <span className="text">Affiliate</span>
-                                </div>
-                               
-                                <div className='sidebar-submenu'>
-                                    <ul className="sidebar-submenu-list">
-                                        <li className="sidebar-submenu-list__item active">
-                                            <a href="all-exchange.html" className="sidebar-submenu-list__link">All Exchange</a>
-                                        </li>
-                                        <li className="sidebar-submenu-list__item">
-                                            <a href="all-exchange.html" className="sidebar-submenu-list__link">Approved Exchange</a>
-                                        </li>
-                                        <li className="sidebar-submenu-list__item active">
-                                            <a href="all-exchange.html" className="sidebar-submenu-list__link">Refunded Exchange</a>
-                                        </li>
-                                        <li className="sidebar-submenu-list__item">
-                                            <a href="all-exchange.html" className="sidebar-submenu-list__link">Canceled Exchange</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <Link href='/dashboard/affiliate'>
+                                    <div className="sidebar-menu-list__link has-dropdown" onClick={() => toggleMenu(5)}>
+                                        <span className="icon"><i class="fa-solid fa-timeline"></i></span>
+                                        <span className="text">Affiliate</span>
+                                    </div>
+                                </Link>
                             </li>
 
                         
                             <li className="sidebar-menu-list__item">
-                                <a href="login.html" className="sidebar-menu-list__link">
+                                <Link href='gift' className="sidebar-menu-list__link">
+                              
                                     <span className="icon"><i class="fa-solid fa-gift"></i></span>
                                     <span className="text">Gift Certificates</span>
-                                </a>
+                              
+                                </Link>
                             </li>
                             <li className="sidebar-menu-list__item">
                                 <a href="login.html" className="sidebar-menu-list__link">

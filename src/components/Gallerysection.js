@@ -1,6 +1,7 @@
 import { Row, Col, Container } from 'react-bootstrap'
 import Image from 'next/image'
 import Link from 'next/link'
+import { RevealWrapper } from  'next-reveal'
 import styles from './gallery.module.css'
 
 import img1 from '@/assets/image/gallery/img1.png'
@@ -18,7 +19,12 @@ export default function GallerySection() {
                 <Row className='justify-content-center'>
                     <Col lg={4}>
                         <div className={styles.section_content}>
+                        <RevealWrapper origin='bottom' delay={100}>
+
+                        
                             <h6 className={styles.title}>Explore Our Favorite Summer Charter Destinations</h6>
+                            </RevealWrapper>
+                            <RevealWrapper origin='bottom' delay={200}>
                             <span className={styles.wave}>
                                 <svg
                                     width="49"
@@ -37,6 +43,7 @@ export default function GallerySection() {
                                     />
                                 </svg>
                             </span>
+                            </RevealWrapper>
                         </div>
                     </Col>
                 </Row>

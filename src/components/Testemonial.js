@@ -1,6 +1,7 @@
 'use client';
 import { Row, Col, Container } from 'react-bootstrap'
 import Carousel from 'react-multi-carousel';
+import { RevealWrapper } from  'next-reveal'
 import 'react-multi-carousel/lib/styles.css';
 
 import styles from './testemonial.module.css'
@@ -36,7 +37,8 @@ export default function Testemonial (){
                     <Col lg={5}>
                         <div className={styles.section_content}>
                             <div className={styles.content_wrap}>
-                                <h6 className={styles.title}>What Our Customer’s Say</h6>
+                            <RevealWrapper origin='bottom' delay={400}> <h6 className={styles.title}>What Our Customer’s Say</h6> </RevealWrapper>
+                            <RevealWrapper origin='bottom' delay={500}>
                                 <span className={styles.wave}>
                                     <svg
                                         width="49"
@@ -55,6 +57,8 @@ export default function Testemonial (){
                                     />
                                     </svg>
                                 </span>
+                            </RevealWrapper>
+                                
                             </div>
                         </div>
                     </Col>
@@ -66,6 +70,13 @@ export default function Testemonial (){
                     itemClass="carousel-item-padding"
                     showDots={false}
                     removeArrowOnDeviceType={["desktop","tablet", "mobile"]}
+                    ssr={true} // means to render carousel on server-side.
+                    infinite={true}
+                    autoPlay={true }
+                    autoPlaySpeed={1000}
+                    keyBoardControl={true}
+                    customTransition="all .5"
+                    transitionDuration={100}
                 >
                     <Col lg={12}>
                         <TestemonialCard />

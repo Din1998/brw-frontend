@@ -6,8 +6,6 @@ import { useMemo, useState } from 'react';
 
 import Image from 'next/image';
 
-import boatIcon from '@/assets/image/common/boaticon.png'
-
 import boatImg from '@/assets/image/product/img4.png'
 
 const markerPositions = [

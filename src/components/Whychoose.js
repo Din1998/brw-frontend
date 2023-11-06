@@ -1,6 +1,7 @@
 
 import { Row, Col, Container } from 'react-bootstrap'
 import Image from 'next/image'
+import { RevealWrapper } from  'next-reveal'
 import styles from './whychoose.module.css'
 
 import img1 from '@/assets/image/common/whychoose.png'
@@ -74,7 +75,10 @@ export default function WhyChoose (){
                                     <Row>
                                         <Col lg={6}>
                                             <div className={styles.section_content}>
+                                            <RevealWrapper origin='bottom' delay={100}>
                                                 <h6 className={styles.title}>Why Choose Us For Best Yacht  Booking</h6>
+                                                </RevealWrapper>
+                                                <RevealWrapper origin='bottom' delay={200}>
                                                 <span className={styles.wave}>
                                                     <svg
                                                         width="49"
@@ -93,6 +97,7 @@ export default function WhyChoose (){
                                                     />
                                                     </svg>
                                                 </span>
+                                                </RevealWrapper>
                                             </div>
                                         </Col>
                                     </Row>

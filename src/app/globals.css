@@ -1520,7 +1520,7 @@ button:focus {
 .form_control:disabled, .form_control[readonly] {
   background-color: hsl(var(--white));
   opacity: 1;
-  border: 0;
+  border: 1px solid hsl(var(--black)/0.1);
 }
 
 .form_control[type=password] {
@@ -1879,7 +1879,10 @@ button:focus {
   overflow: hidden;
   background: hsl(var(--base));
 }
-
+.disable{
+  background: hsl(var(--black)/0.3);
+  border: none !important;
+}
 .danger{
   background: hsl(var(--danger)) !important;
   border: none !important;
@@ -2244,7 +2247,11 @@ button:focus {
   transition: 0.5s;
 }
 
-
+.btn_group{
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
 /* react slider */
 
 .carousel-item-padding{
@@ -3216,7 +3223,8 @@ button:focus {
   padding: 20px;
   background: hsl(var(--black)/0.03);
   width: 100%;
-  height: 100vh;
+  height: 100%;
+    min-height: 100vh;
 }
 .dashboard_section{
   margin-left: 300px;
@@ -3372,3 +3380,139 @@ button:focus {
  .dashboard_boatdetails_wrap .others_info:last-child{
   padding-bottom: 0px;
  }
+
+
+
+ /* map wrap */
+ .map_wrap{
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.map_wrap iframe{
+  width: 100%;
+  height: 100%;
+}
+
+
+/* drag and drop box */
+
+.photo_upload .drag_area{
+  height: 400px;
+  border-radius: 8px;
+  border: 1px dashed hsl(var(--base));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  user-select: none;
+  --webkit-user-select:none;
+}
+
+.photo_upload .drag_area .visible{
+  font-size: 18px;
+}
+
+.photo_upload .select{
+  cursor: pointer;
+  transition: 0.4s;
+}
+.photo_upload .select:hover{
+ opacity: 0.6;
+}
+
+.photo_upload .container_area{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+.photo_upload .container_area .image{
+  height: 75px;
+  margin-left: 5px;
+  width: 75px;
+  position: relative;
+  margin-bottom: 8px;
+}
+.photo_upload .container_area .image img{
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.photo_upload .container_area .image span{
+  position: absolute;
+  top: -2px;
+  right: 9px;
+  font-size: 20px;
+  cursor: pointer;
+  color:hsl(var(--base))
+}
+
+.photo_upload input,
+.photo_upload .drag_area .on-drop,
+.photo_upload .drag_area.dragover .visible{
+  display: none;
+}
+
+.delete{
+  z-index: 999;
+}
+
+
+/* badge */
+
+.badge {
+  border-radius: 30px;
+  padding: 5px 15px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.badge--base {
+  background-color: hsl(var(--base)/0.1) !important;
+  color: hsl(var(--base)) !important;
+}
+
+.badge--primary {
+  background-color: hsl(var(--primary)/0.1) !important;
+  color: hsl(var(--primary)) !important;
+}
+
+.badge--secondary {
+  background-color: hsl(var(--secondary)/0.1) !important;
+  color: hsl(var(--secondary)) !important;
+}
+
+.badge--success {
+  background-color: hsl(var(--success)/0.1) !important;
+  color: hsl(var(--success)) !important;
+}
+
+.badge--danger {
+  background-color: hsl(var(--danger)/0.1) !important;
+  color: hsl(var(--danger)) !important;
+}
+
+.badge--warning {
+  background-color: hsl(var(--warning)/0.1) !important;
+  color: hsl(var(--warning)) !important;
+}
+
+.badge--info {
+  background-color: hsl(var(--info)/0.1) !important;
+  color: hsl(var(--info)) !important;
+}
+
+.badge--violet {
+  background-color: hsl(var(--violet)/0.1) !important;
+  color: hsl(var(--violet)) !important;
+}
