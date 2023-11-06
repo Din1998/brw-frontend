@@ -76,7 +76,7 @@ export default function AddBoat() {
                     <Col lg={12} className="px-0">
                         <div className="base_card">
 
-                            <Tab.Container id="my-tabs" defaultActiveKey="3" >
+                            <Tab.Container id="my-tabs" defaultActiveKey="1" >
                                 <Nav variant="pills">
                                     <Nav.Item>
                                         <Nav.Link eventKey="1">
@@ -115,13 +115,13 @@ export default function AddBoat() {
                                                             <Col lg={6}>
                                                                 <div className='form_group mb-4'>
                                                                     <label className='mb-3'>Listing Title</label>
-                                                                    <input className='form_control' />
+                                                                    <input className='form_control' placeholder="Enter a catchy title to attract customers to you listing..."/>
                                                                 </div>
                                                             </Col>
                                                             <Col lg={6}>
                                                                 <div className='form_group mb-4'>
                                                                     <label className='mb-3'>Short Name</label>
-                                                                    <input className='form_control' />
+                                                                    <input className='form_control' placeholder="Ex: kayes Yacht"/>
                                                                 </div>
                                                             </Col>
                                                         </Row>
@@ -129,31 +129,31 @@ export default function AddBoat() {
                                                             <Col lg={12}>
                                                                 <div className='form_group mb-4'>
                                                                     <label className='mb-3'>Description</label>
-                                                                    <textarea className='form_control' />
+                                                                    <textarea className='form_control' placeholder="Enter a catchy title to attract customers to you listing..."/>
                                                                 </div>
                                                             </Col>
                                                         </Row>
                                                         <Row>
                                                             <Col lg={12}>
                                                                 <div className="boat_type">
-                                                                    <div className="boat_type-content_wrap">
+                                                                    <div className="boat_type-content_wrap mb-4">
                                                                         <h6>What type of charter with listing?</h6>
                                                                         <p>Depending on the flexibility of your offering, you can choose more than one charter type.</p>
                                                                     </div>
                                                                     <div class="form-radio mb-20">
                                                                         <input class="form-check-input" type="radio" value="1" name="categories" />
                                                                         <label class="form-check-label" for="chekbox-0">Captain provided in price</label>
-                                                                        <p>A captain is provided by the listing owner to host and operate the trip.</p>
+                                                                        <p className="form_radio_subTitle">A captain is provided by the listing owner to host and operate the trip.</p>
                                                                     </div>
                                                                     <div class="form-radio mb-20">
                                                                         <input class="form-check-input" type="radio" value="1" name="categories" />
                                                                         <label class="form-check-label" for="chekbox-0">Captain arranged separately</label>
-                                                                        <p>Professional captain required, arranged and paid for separately.</p>
+                                                                        <p className="form_radio_subTitle">Professional captain required, arranged and paid for separately.</p>
                                                                     </div>
                                                                     <div class="form-radio mb-20">
                                                                         <input class="form-check-input" type="radio" value="1" name="categories" />
                                                                         <label class="form-check-label" for="chekbox-0">Captain not provided</label>
-                                                                        <p>Customer provides or acts as the qualified operator.</p>
+                                                                        <p className="form_radio_subTitle">Customer provides or acts as the qualified operator.</p>
                                                                     </div>
                                                                 </div>
                                                             </Col>
@@ -162,7 +162,7 @@ export default function AddBoat() {
                                                             <Col lg={6}>
                                                                 <div className="capacity">
                                                                     <h6>Capacity</h6>
-                                                                    <p>Additional documentation may be required for operation with more than 12 passengers</p>
+                                                                    <p className="mb-3">Additional documentation may be required for operation <br/> with more than 12 passengers</p>
                                                                     <div className='form_group mb-4'>
                                                                         <input className='form_control' />
                                                                     </div>
@@ -171,7 +171,7 @@ export default function AddBoat() {
                                                         </Row>
                                                         <Row>
 
-                                                            <div className="category">
+                                                            <div className="category mb-4">
                                                                 <h6>Category</h6>
                                                                 <p>Choose 3 categories for your vessel.</p>
                                                             </div>
