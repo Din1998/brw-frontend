@@ -12,7 +12,7 @@ export default function DashboardHeader({ routeName }){
             <div className="item_wrapper">
                 <ul className="items">
                     <li><Link href='/'><i class="fa-solid fa-bell"></i></Link></li>
-                    <li><Link href='/'><span className="message_icon"><i class="fa-solid fa-message"></i></span></Link></li>
+                    <li><Link href='/'><span className="message_icon"><i class="fa-solid fa-message"></i> Inbox</span></Link></li>
                 </ul>
                 <div className="user_thumb">
                     <Image src={userImg} alt="..." />

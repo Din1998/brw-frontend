@@ -76,7 +76,7 @@ export default function AddBoat() {
                     <Col lg={12} className="px-0">
                         <div className="base_card">
 
-                            <Tab.Container id="my-tabs" defaultActiveKey="1" >
+                            <Tab.Container id="my-tabs" defaultActiveKey="3" >
                                 <Nav variant="pills">
                                     <Nav.Item>
                                         <Nav.Link eventKey="1">
@@ -107,7 +107,7 @@ export default function AddBoat() {
 
                                 <Tab.Content>
                                     <Tab.Pane eventKey="1">
-                                        <div className="essential mt-5">
+                                        <div className="essential add-boat_panel">
                                             <Row>
                                                 <Col lg={12}>
                                                     <form>
@@ -254,38 +254,59 @@ export default function AddBoat() {
                                         </div>
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="2">
-                                        <Row className="py-4">
+                                        <Row>
                                             <Col lg={12}>
-                                                <div className="location_tab">
-                                                    <div className="map_wrap">
+                                                <div className="location_tab add-boat_panel">
+                                                    <div className="map_wrap mb-4">
                                                         <Gmap />
                                                     </div>
                                                 </div>
-                                                <div className="btn_group pt-4">
-                                                    <button className="btn__base disable me-3">Discard Changes</button>
-                                                    <button className="btn__base">Save</button>
-                                                </div>
+                                                <form>
+                                                    <Row>
+                                                        <Col lg={6}>
+                                                            <div className='form_group mb-4'>
+                                                                <label className='mb-3'>Add Location</label>
+                                                                <input className='form_control' />
+                                                            </div>
+                                                        </Col>
+                                                        <Col lg={6}>
+                                                            <div className='form_group mb-4'>
+                                                                <label className='mb-3'>Add Latitude</label>
+                                                                <input className='form_control' />
+                                                            </div>
+                                                        </Col>
+                                                        <Col lg={6}>
+                                                            <div className='form_group mb-4'>
+                                                                <label className='mb-3'>Add Longitude</label>
+                                                                <input className='form_control' />
+                                                            </div>
+                                                        </Col>
+                                                        <Col lg={2} className="d-flex justify-content-center align-items-center flex-column">
+                                                            <div className="btn_group pt-4">
+                                                                <button className="btn__base disable me-3">Discard Changes</button>
+                                                                <button className="btn__base">Save</button>
+                                                            </div>
+                                                        </Col>
+                                                    </Row>
+                                                </form>
+
                                             </Col>
                                         </Row>
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="3">
-                                        <div className="photo_upload">
+                                        <div className="photo_upload add-boat_panel">
                                             <form>
-                                                <div className="top">
-                                                    <p>Drag And Drop</p>
-                                                </div>
                                                 <div className="drag_area" onDragOver={onDragOver} onDragLeave={onDragLeave} onDrop={onDrop}>
                                                     {isDragging ? (
                                                         <span className="select">
                                                             Drop image here
                                                         </span>
                                                     ) : (
-                                                        <>
-                                                            drag and drop image hare or {""}
-                                                            <span role="button" onClick={selectFiles}>
-                                                                Browse
-                                                            </span>
-                                                        </>
+                                                        <div className="drag_drop_content">
+                                                            <span className="icon_wrap" role="button" onClick={selectFiles}><i class="fa-regular fa-images"></i></span>
+                                                            <p role="button" onClick={selectFiles}>Drag and drop an image, Browse</p>
+                                                            <p>Minimum 1200px width recommended. Max 10MB each</p>
+                                                        </div>
 
                                                     )
 
@@ -299,13 +320,10 @@ export default function AddBoat() {
                                                         console.log(images.name)
                                                         return (
                                                             <div className="image" key={index}>
-                                                                <span className="delete" onClick={() => deleteImage(index)}>&times;</span>
+                                                                <span className="delete" onClick={() => deleteImage(index)}><i class="fa-solid fa-xmark"></i></span>
                                                                 <Image fill={true} src={images.url} alt="..." />
                                                             </div>
                                                         )
-
-
-
                                                     })}
                                                 </div>
                                                 <Row>
@@ -323,7 +341,7 @@ export default function AddBoat() {
                                         </div>
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="4">
-                                        <div className="vessel_dtails pt-5">
+                                        <div className="vessel_dtails add-boat_panel">
                                             <Row>
                                                 <Col lg={12}>
                                                     <form>
@@ -450,19 +468,26 @@ export default function AddBoat() {
                                         </div>
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="5">
-                                        <div className="price_tab pt-5">
+                                        <div className="price_tab add-boat_panel">
                                             <form>
                                                 <Row>
                                                     <Col lg={6}>
                                                         <div class="form-group mb-3">
-                                                            <label className='mb-3'>Cabin</label>
-                                                            <input className='form_control' />
+                                                            <label className='mb-3'>Price(USD)</label>
+                                                            <input className='form_control' placeholder="00.00" />
                                                         </div>
                                                     </Col>
                                                     <Col lg={6}>
                                                         <div class="form-group mb-3">
-                                                            <label className='mb-3'>Passenger Capacity</label>
-                                                            <input className='form_control' />
+                                                            <label className='mb-3'>Type of Rent</label>
+                                                            <div class="form-group mb-3">
+                                                                <select class="form_control form-select" name="gateway" required="" id="gateway">
+                                                                    <option value="">Select One</option>
+                                                                    <option value="101" data-gateway="">Paypal - USD</option>
+                                                                    <option value="114" data-gateway="">Stripe Checkout - USD</option>
+                                                                    <option value="1000" data-gateway="">Mobile</option>
+                                                                </select>
+                                                            </div>
                                                         </div>
                                                     </Col>
 
@@ -470,8 +495,8 @@ export default function AddBoat() {
                                                 <Row>
                                                     <Col lg={12}>
                                                         <div class="form-group mb-3">
-                                                            <label className='mb-3'>Passenger Capacity</label>
-                                                            <textarea className='form_control'></textarea>
+                                                            <label className='mb-3'>Description</label>
+                                                            <textarea className='form_control' placeholder="Enter a catchy title to attract customers to you listing..."></textarea>
                                                         </div>
                                                     </Col>
                                                 </Row>

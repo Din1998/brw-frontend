@@ -12,7 +12,7 @@ export default function Miles(){
                                <Col lg={6}>
                                     <div class="form_group mb-4">
                                         <label class="mb-3">Miles accumulated</label>
-                                        <input class="form_control" />
+                                        <input class="form_control" placeholder="00"/>
                                     </div>
                                </Col>
                                <Col lg={6}>
