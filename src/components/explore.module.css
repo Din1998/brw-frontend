@@ -1,11 +1,12 @@
 .explore_section{
-  padding: 100px 30px 100px 30px;
+  padding: 100px  30px;
   background: hsl(var(--black)/0.02);
 }
 
 .section_content{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 40px;
 }
 .content_wrap{
@@ -21,5 +22,28 @@
 
 .wave svg{
   fill: hsl(179, 96%, 33%);
+}
+
+@media (max-width:1440px){
+  .explore_section{
+    padding: 100px 0px;
+    background: hsl(var(--black)/0.02);
+  }
+  .content_wrap{
+    width: 40%;
+  }
+}
+
+
+@media (max-width:990px){
+  .content_wrap{
+    width: 60%;
+  }
+}
+@media (max-width:768px){
+  .content_wrap{
+    width: 100%;
+    margin-bottom: 28px;
+  }
 }
 

@@ -24,9 +24,9 @@ export default function IntroSection() {
                                 <Image src={img2} alt='...' />
                             </div>
                             <Row>
-                                <Col lg={10}>
+                                <Col xl={10} lg={112}>
                                     <Row>
-                                        <Col lg={8}>
+                                        <Col xl={8} lg={12}>
                                             <div className={styles.section_content}>
                                                 <RevealWrapper origin='bottom' delay={100}><h6 className={styles.title}>Providing Large Yachts For A Perfect</h6> </RevealWrapper>
                                                 <RevealWrapper origin='bottom' delay={200}>
@@ -55,25 +55,25 @@ export default function IntroSection() {
                                     </Row>
 
                                     <Row>
-                                        <Col lg={10}>
+                                        <Col xl={10} lg={12}>
                                             <div className={styles.content_wrap}>
                                                 <p>Proud to offer the most dynamic multifaceted marketing in the industry and all countries his book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, orem ipsum dolor sit ame</p>
                                             </div>
                                             <div className={styles.counter_wrap}>
                                                 <Row>
-                                                    <Col lg={4}>
+                                                    <Col lg={4} md={4}>
                                                         <div className={styles.counter}>
                                                             <h6 className={styles.number}>1025</h6>
                                                             <p className={styles.subtitle}>Satisfied customers</p>
                                                         </div>
                                                     </Col>
-                                                    <Col lg={4}>
+                                                    <Col lg={4} md={4}>
                                                         <div className={styles.counter}>
                                                             <h6 className={styles.number}>1025</h6>
                                                             <p className={styles.subtitle}>Satisfied customers</p>
                                                         </div>
                                                     </Col>
-                                                    <Col lg={4}>
+                                                    <Col lg={4} md={4}>
                                                         <div className={styles.counter}>
                                                             <h6 className={styles.number}>1025</h6>
                                                             <p className={styles.subtitle}>Satisfied customers</p>

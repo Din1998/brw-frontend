@@ -63,7 +63,7 @@ export default function Brows() {
                             <h6 className='title'>Filter By</h6>
                             <form>
                                 <Row className='gx-0 gy-4'>
-                                    <Col lg={2}>
+                                    <Col xl={2} lg={3} md={4} sm={6}>
                                         <div className='filter_option1'>
                                             <div className='form_group mb-3'>
                                                 <label className='mb-2'>Check In</label>
@@ -80,7 +80,7 @@ export default function Brows() {
                                             </div>
                                         </div>
                                     </Col>
-                                    <Col lg={2}>
+                                    <Col xl={2} lg={3} md={4} sm={6}>
                                         <div className='filter_option2'>
                                             <div className=''>
                                                 <h6 className='mb-4'>Type of charter</h6>
@@ -118,7 +118,7 @@ export default function Brows() {
                                             </div>
                                         </div>
                                     </Col>
-                                    <Col lg={2}>
+                                    <Col xl={2} lg={3} md={4} sm={6}>
                                         <div className='filter_option3'>
                                             <div className=''>
                                                 <h6 className='mb-4'>Boat type</h6>
@@ -161,7 +161,7 @@ export default function Brows() {
                                             </div>
                                         </div>
                                     </Col>
-                                    <Col lg={2}>
+                                    <Col xl={2} lg={3} md={4} sm={6}>
                                         <div className='filter_option4'>
                                             <div className=''>
                                                 <h6 className='mb-4'>Brand / Model</h6>
@@ -216,7 +216,7 @@ export default function Brows() {
                                             </div>
                                         </div>
                                     </Col>
-                                    <Col lg={1}>
+                                    <Col xl={1} lg={3} md={4} sm={6}>
                                         <div className='filter_option5'>
                                             <div className=''>
                                                 <h6 className='mb-4'>Cabin</h6>
@@ -259,7 +259,7 @@ export default function Brows() {
                                             </div>
                                         </div>
                                     </Col>
-                                    <Col lg={1}>
+                                    <Col xl={1} lg={3} md={4} sm={6}>
                                         <div className='filter_option6'>
                                             <div className=''>
                                                     <h6 className='mb-4'>Length</h6>
@@ -303,7 +303,7 @@ export default function Brows() {
                                             </div>
                                         </div>
                                     </Col>
-                                    <Col lg={2}>
+                                    <Col xl={2} lg={6} md={12} sm={6}>
                                         <div className='filter_option7'>
                                             <h6 className='mb-4'>Price</h6>
                                             <div className='show_price'>
@@ -353,53 +353,40 @@ export default function Brows() {
                 </Row>
 
                 <Row className='gx-3 pt-4'>
-                    <Col lg={6}>
+                    <Col xxl={8} xl={12}>
                         <Row className='gy-4'>
-                            <Col lg={4}>
+                            <Col xxl={4} xl={4} lg={4} md={6}>
                                 <BaseCard />
                             </Col>
-                            <Col lg={4}>
+                            <Col xxl={4} xl={4}  lg={4} md={6}>
                                 <BaseCard />
                             </Col>
-                            <Col lg={4}>
+                            <Col xxl={4} xl={4}  lg={4} md={6}>
                                 <BaseCard />
                             </Col>
-                            <Col lg={4}>
+                            <Col xxl={4} xl={4}  lg={4} md={6}>
                                 <BaseCard />
                             </Col>
-                            <Col lg={4}>
+                            <Col xxl={4} xl={4}  lg={4} md={6}>
                                 <BaseCard />
                             </Col>
-                            <Col lg={4}>
-                                <BaseCard />
-                            </Col>
-                            <Col lg={4}>
-                                <BaseCard />
-                            </Col>
-                            <Col lg={4}>
-                                <BaseCard />
-                            </Col>
-                            <Col lg={4}>
+                            <Col xxl={4} xl={4}  lg={4} md={6}>
                                 <BaseCard />
                             </Col>
                         </Row>
-
+                        <Row className='pb-4'>
+                            <Col lg={12}>
+                                <Pagination />
+                            </Col>
+                        </Row>
                     </Col>
-                    <Col lg={6}>
 
-                        <div class="google-map-wrap">
+                    <Col xxl={4} xl={12}>
+                        <div class="google-map-wrap1">
                            <Gmap />
                         </div>
-
                     </Col>
                 </Row>
-
-                <Row className='pb-4'>
-                    <Col lg={12}>
-                        <Pagination />
-                    </Col>
-                </Row>
-
             </Container>
 
         </section>

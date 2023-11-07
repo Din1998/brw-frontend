@@ -8,12 +8,12 @@
     
 }
 
-.card_wrap::after{
+.card_wrap::after {
     content: "";
     top: 55px;
-    right: -530px;
+    right: -363px;
     position: absolute;
-    width: 600px;
+    width: 417px;
     height: 1px;
     border: 1px dashed hsl(var(--black)/.07);
 }
@@ -65,4 +65,34 @@
     font-weight: 500;
     line-height: 1.75;
     text-align: center;
+}
+
+@media (max-width:1440px){
+    .card_wrap::after{
+        content: "";
+        top: 55px;
+        right: -218px;
+        position: absolute;
+        width: 300px;
+        height: 1px;
+        border: 1px dashed hsl(var(--black)/.07);
+    }
+}
+
+@media (max-width:1186px){
+    .card_wrap::after{
+        content: "";
+        top: 55px;
+        right: -118px;
+        position: absolute;
+        width: 200px;
+        height: 1px;
+        border: 1px dashed hsl(var(--black)/.07);
+    }
+}
+
+@media (max-width:991px){
+    .card_wrap::after{
+        content: none;
+    }
 }

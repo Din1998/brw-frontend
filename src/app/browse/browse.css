@@ -127,3 +127,30 @@
 .rc-slider-rail {
     background-color: hsl(var(--base)/0.08);
 }
+
+
+@media (max-width: 425px){
+    .all-yachts{
+        padding: 0px  0px 50px 0px;
+    }
+    .filter_cta {
+        top: 68px;
+        left: 10px;
+        justify-content: flex-start;
+    }
+    .filter_box{
+        margin-top: 40px;
+    }
+    .filter_option3{
+        justify-content: start;
+    }
+    .filter_option4{
+        justify-content: start;
+    }
+    .filter_option5{
+        justify-content: start;
+    }
+    .filter_option6{
+        justify-content: start;
+    }
+}

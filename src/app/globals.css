@@ -1,7 +1,5 @@
 :root {
-  /* === Font Family === */
-    --heading-font: "Plus Jakarta Sans", sans-serif;
-    --body-font: "Plus Jakarta Sans", sans-serif;
+
   /* === TypoGraphy ===*/
     --heading-one: clamp(1.5rem, 2.8vw + 1rem, 3.75rem);
     --heading-two: clamp(1.375rem, 1.7vw + 1rem, 2.5rem);
@@ -1382,7 +1380,7 @@ h3 {
 }
 
 h4 {
-  font-size: var(--heading-four);
+  font-size: var(--heading-four) ;
   font-weight: 500;
 }
 
@@ -1396,11 +1394,6 @@ h6 {
   font-weight: 500;
 }
 
-@media (max-width: 1399px) {
-  h6 {
-      font-size: 14px !important;
-  }
-}
 
 h1 > a,
 h2 > a,
@@ -1849,6 +1842,13 @@ input[type=number] {
 }
 .class-for-eighth{
   border-right: none !important;
+}
+
+@media (max-width:425px){
+  .last_card{
+    border-bottom: none !important;
+    padding: 34px 30px 0px 0px !important;
+  }
 }
 
 /*  */
@@ -2352,6 +2352,19 @@ button:focus {
 }
 
 /* google map */
+.google-map-wrap1{
+  background: hsl(var(--white));
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    height: 990px;
+}
+.google-map-wrap1 iframe{
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
 .google-map-wrap{
   background: hsl(var(--white));
     padding: 12px;
@@ -2483,7 +2496,29 @@ button:focus {
   top: 0;
   right: -800px;
   overflow-y: hidden;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
+
+}
+
+@media (max-width:690px){
+  .login-box{
+    width: 100%;
+    padding: 100px 20px;
+  }
+  .login-box .social-option .text::before {
+    content: "";
+    width: 60px !important;
+    height: 1px;
+    border: 1px dashed hsl(var(--black));
+  }
+  
+  .login-box .social-option .text::after {
+    content: "";
+    width: 60px !important;
+    height: 1px;
+    border: 1px dashed hsl(var(--black));
+  }
+
 }
 .login-box.show{
   right: 0;
@@ -2501,6 +2536,12 @@ button:focus {
   top: 14px;
   right: 17px;
   display: none;
+}
+
+@media (max-width:768px){
+  .login-box .close--btn {
+    display: block;
+  }
 }
 
 .login-box .close--btn .wrap {
@@ -3005,6 +3046,9 @@ button:focus {
       z-index: 9992;
       border-radius: 0;
   }
+
+
+
 }
 
 .sidebar-menu__close {
@@ -3175,6 +3219,31 @@ button:focus {
   margin-left: 300px;
   border-radius: 8px;
   height: 60px;
+}
+@media (max-width: 1199px){
+  .dashboardHeader{
+    margin-left: 0px;
+  }
+  .dashboard_section{
+    margin-left: 0px !important;
+  }
+}
+.dashboard-body__bar-icon {
+  color: hsl(var(--white));
+  font-size: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-color: hsl(var(--base));
+  text-align: center;
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+.dashboardHeader .route_name{
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 .dashboardHeader .route_name .name{
   margin: 0px;
@@ -3561,4 +3630,196 @@ button:focus {
 /*  */
 .form_radio_subTitle{
   margin-left: 32px !important;
+}
+
+
+/* xxxl breakpoints */
+
+@media (max-width:1920px) and (min-width:1799px){
+  .xxxl{
+    flex: 0 0 auto;
+    width: 16.66666667%;
+  }
+}
+@media (max-width:1800px) and (min-width: 1562px){
+  .xxxl{
+    flex: 0 0 auto;
+    width: 20%;
+  }
+}
+
+@media (max-width:1563px) and (min-width:1440px){
+  .xxxl{
+    width: 25% !important;
+  }
+}
+
+
+/* offcanvas customm design*/
+
+
+.offcanvas {
+  background: hsl(var(--black)) !important;
+  width: 300px !important;
+}
+
+.offcanvas .offcanvas-header .btn-close {
+  opacity: 1;
+}
+
+.offcanvas .offcanvas-header .logo {
+  max-width: 50%;
+}
+
+.offcanvas .offcanvas-body {
+  padding: 32px 0px;
+}
+
+.offcanvas .offcanvas-body .user-info {
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.offcanvas .offcanvas-body .user-info a h4 {
+  margin: 0px;
+  color: hsl(var(--white));
+}
+
+.offcanvas .offcanvas-body .user-info .user-thumb {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  z-index: 99;
+}
+
+.offcanvas .offcanvas-body .user-info .user-thumb img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.offcanvas .offcanvas-body .side-Nav {
+  padding: 0px 24px;
+}
+
+.offcanvas .offcanvas-body .side-Nav li {
+  position: relative;
+  border-bottom: 1px solid hsl(var(--base)/0.2);
+}
+
+.offcanvas .offcanvas-body .side-Nav li button {
+  color: hsl(var(--white));
+  height: 50px;
+}
+
+.offcanvas .offcanvas-body .side-Nav li:last-child a {
+  border-bottom: none !important;
+}
+
+.offcanvas .offcanvas-body .side-Nav li a {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  gap: 16px;
+  height: 50px;
+  color: hsl(var(--white));
+}
+
+.offcanvas .offcanvas-body .side-Nav li a p {
+  font-size: 16px;
+}
+
+.offcanvas .offcanvas-body .side-Nav li .active {
+  color: hsl(var(--base));
+}
+
+.offcanvas .search-box {
+  padding: 24px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.offcanvas .search-box .form--control {
+  font-weight: 500;
+  outline: none;
+  width: 70%;
+  padding: 10px 44px;
+  line-height: 1;
+}
+
+.offcanvas .search-box .search-btn {
+  padding: 10px 20px;
+}
+
+@media (max-width: 770px) {
+  .offcanvas .search-box {
+      padding: 16px 12px;
+      display: flex;
+      justify-content: center;
+  }
+
+  .offcanvas .search-box .form--control {
+      font-weight: 500;
+      outline: none;
+      width: 70%;
+      padding: 10px !important;
+      background-color: hsl(var(--body-color)/0.1);
+      border: 1px solid hsl(var(--base));
+      padding-right: 0px !important;
+      line-height: 1;
+  }
+
+  .offcanvas .search-box .search-btn {
+      border: 1px solid hsl(var(--base));
+      padding: 10px 10px !important;
+      color: hsl(var(--base));
+  }
+}
+
+.ham__menu{
+  display: none;
+  color: hsl(var(--base));
+}
+@media (max-width: 991px) {
+  .ham__menu {
+      display: block !important;
+  }
+}
+
+
+
+/* section content title media */
+@media (max-width: 425px){
+  .offer_section_title__klx_d {
+    font-size: 34px !important;
+  }
+  .explore_title__OnKJ4{
+    font-size: 34px !important;
+  }
+  .gallery_section_content__0vC5J .gallery_title___DDyh{
+    font-size: 34px !important;
+  }
+  .whychoose_section_content__4P0q9 .whychoose_title__ygz2D{
+    font-size: 34px !important;
+  }
+  .howWork_section_content__zyGod .howWork_title__JRoJC{
+    font-size: 34px !important;
+  }
+  .intro_section_content__GBwWt .intro_title__lbF55{
+    font-size: 34px !important;
+  }
+  .explore2_title__69x3_{
+    font-size: 34px !important;
+  }
+  .testemonial_title__PnfbX{
+    font-size: 34px !important;
+  }
+  .whychoose_section_content__4P0q9 .whychoose_title__ygz2D{
+    font-size: 34px !important;
+  }
 }

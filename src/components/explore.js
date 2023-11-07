@@ -1,17 +1,19 @@
-import { Row, Col, Container } from 'react-bootstrap'
+import {  ThemeProvider, Row, Col, Container } from 'react-bootstrap'
+
 import { RevealWrapper } from 'next-reveal'
 
 import styles from './explore.module.css'
 
 import BaseCard from '@/components/baseCard/BaseCard'
 
-
+const breakpoints = ['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs'];
 export default function Explore() {
+
   return (
     <section className={styles.explore_section}>
+     
       <Container fluid>
-        <Row>
-          <div className={styles.section_content}>
+      <div className={styles.section_content}>
             <div className={styles.content_wrap}>
               <RevealWrapper origin='bottom' delay={100}>
                 <h6 className={styles.title}>Explore Our Trended and Featured Yachts</h6>
@@ -43,24 +45,23 @@ export default function Explore() {
               <button className='btn__base2'>View All</button>
             </div>
           </div>
-        </Row>
-        <Row>
-          <Col lg={2}>
+        <Row className='gy-4 justify-content-center'>
+          <Col xxl={3} xl={3} lg={4} md={6} col={2} className='xxxl'>
             <BaseCard />
           </Col>
-          <Col lg={2}>
+          <Col xxl={3} xl={3} lg={4} md={6} className='xxxl'>
             <BaseCard />
           </Col>
-          <Col lg={2}>
+          <Col xxl={3} xl={3} lg={4} md={6} className='xxxl'>
             <BaseCard />
           </Col>
-          <Col lg={2}>
+          <Col xxl={3} xl={3} lg={4} md={6} className='xxxl'>
             <BaseCard />
           </Col>
-          <Col lg={2}>
+          <Col xxl={3} xl={3} lg={4} md={6} className='xxxl'>
             <BaseCard />
           </Col>
-          <Col lg={2}>
+          <Col xxl={3} xl={3} lg={4} md={6} className='xxxl'>
             <BaseCard />
           </Col>
         </Row>

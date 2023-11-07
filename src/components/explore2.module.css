@@ -25,3 +25,10 @@
     line-height: 1.5;
     margin-bottom: 30px !important;
 }
+
+
+@media (max-width:1440px){
+    .explore_section{
+        padding: 0px 0px 100px 0px;
+    }
+}

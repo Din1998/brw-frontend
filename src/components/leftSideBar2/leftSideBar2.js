@@ -3,7 +3,10 @@ import logo from '@/assets/image/logo/f-logo.png'
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Sidebar2 = () => {
+const Sidebar2 = ({activeClass,toggleSidebar}) => {
+
+
+
     const [activeDropdown, setActiveDropdown] = useState(null);
 
     const toggleDropdown = (index) => {
@@ -65,9 +68,9 @@ const Sidebar2 = () => {
         <div className='dashboard'>
             <div className="dashboard_profile">
                 <div className="dashboard_profile__details">
-                    <div className="sidebar-menu">
-                        <span className="sidebar-menu__close">
-                            <i className="las la-times"></i>
+                    <div className={`sidebar-menu ${activeClass ? 'show-sidebar' : 'closed'}`}>
+                        <span className="sidebar-menu__close" onClick={toggleSidebar} >
+                        <i class="fa-solid fa-xmark"></i>
                         </span>
                         <div className="logo-wrapper">
                             <Link href="/" className="sidebar_logo"><Image src={logo} alt='...' /></Link>

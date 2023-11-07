@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Row, Container } from 'react-bootstrap';
+import { Row, Container,Offcanvas } from 'react-bootstrap';
 
 import { useState,useEffect } from 'react';
 
@@ -67,7 +67,10 @@ export default function NavBar2() {
         };
     }, []);
 
+    const [show, setShow] = useState(false);
 
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
    
 
     return (
@@ -76,10 +79,7 @@ export default function NavBar2() {
                 <Container fluid>
                     <Row>
                         <div className={styles.header_wrapper}>
-                            {/* <i className={fa-sharp fa-solid fa-bars-staggered ham__menu} data-bs-toggle="offcanvas"
-            data-bs-target={#offcanvasExample} aria-controls="offcanvasExample"></i> */}
-
-
+                            <i className='fa-sharp fa-solid fa-bars-staggered ham__menu' id="ham_menu" onClick={handleShow}></i>
                             <div className={styles.header_menu_wrapper}>
                                 <div className={styles.logo_wrapper}>
                                     <Link href="/" className={styles.normal - logo} id="normal-logo">
@@ -92,7 +92,7 @@ export default function NavBar2() {
                             </div>
                             <div className={styles.menu_wrapper}>
                                 <ul className={styles.main_menu}>
-                                <li className={styles.home}><Link className={path === '/' ? styles.active : ''} href="/">Home </Link></li>
+                                    <li className={styles.home}><Link className={path === '/' ? styles.active : ''} href="/">Home </Link></li>
                                     <li><Link className={path === '/browse' ? styles.active : ''} href="/browse">Browse</Link></li>
                                     <li><Link className={path === '/about' ? styles.active : ''} href="/about">About</Link></li>
                                     <li><Link className={path === '/contact' ? styles.active : ''} href="/contact">Contact</Link></li>
@@ -125,6 +125,68 @@ export default function NavBar2() {
                     <Login isClassNameActive={isClassNameActive} toggleSignin={toggleSignin} />
                 )}     
             </div>
+
+
+
+             {/* offcanvas */}
+             <Offcanvas show={show} onHide={handleClose}>
+                <Offcanvas.Header closeButton>
+                    <div class="logo">
+                        <div class="header-menu-wrapper align-items-center d-flex">
+                            <div class="logo-wrapper">
+                                <a href="index.html" class="normal-logo" id="offcanvas-logo-normal">
+                                    <img src="assets/images/logo/logo.png" alt="" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </Offcanvas.Header>
+                <Offcanvas.Body>
+                    <div class="user-info">
+                        <div class="user-thumb">
+                            <a href="userDashboard.html">
+                                <img src="assets/images/user/user3.png" alt="user-thumb" />
+                            </a>
+                        </div>
+                        <a href="userDashboard.html">
+                            <h4>Anonymous Alex</h4>
+                        </a>
+                    </div>
+                    <ul class="side-Nav">
+                        <li>
+                            <a class="active" href="index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html">
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="blog.html">
+                                Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+                        <li>
+                            <a href="login.html">
+                                Login
+                            </a>
+                        </li>
+                        <li>
+                            <button class="login-btn cart-btn">Cart Item</button>
+                        </li>
+                        <li>
+                            <a href="login.html" class="login-btn">Signup</a>
+                        </li>
+                    </ul>
+                </Offcanvas.Body>
+            </Offcanvas>
         </div>
     )
 }

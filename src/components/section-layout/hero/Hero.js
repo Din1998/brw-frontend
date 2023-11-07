@@ -8,24 +8,23 @@ import styles from './hero.module.css';
 import heroBg from '../../../assets/image/hero/hero-bg.png'
 
 export default function Hero() {
-
-      const wow = 'wow animate__animated animate__fadeInUp'
+    
     return (
         <section className={styles.hero_section} style={{ background: `url(${heroBg.src})` }}>
             <Container fluid>
                 <Row className={`justify-content-center`}>
-                    <Col lg={6}>
+                    <Col xl={6} lg={10} md={10}>
                         <div className={styles.hero_item_wrap}>
                             <div className={styles.hero_content}>
                             <RevealWrapper origin='bottom' delay={100}>
-                            <h1 className={styles.hero_title}>We Charter Professionally Luxury Yachts</h1>
+                                <h1 className={styles.hero_title}>We Charter Professionally Luxury Yachts</h1>
                             </RevealWrapper>
-                                
-                            <RevealWrapper origin='bottom' delay={200}>
-                                <p className={styles.hero_subtitle}>We do our best to make your sailing experience one of the most
-                                        memorable in your life.</p>
-                            </RevealWrapper>
-                                
+                            <div className={styles.hero_subtitle_wrap}>
+                                <RevealWrapper origin='bottom' delay={200}>
+                                    <p className={styles.hero_subtitle}>We do our best to make your sailing experience one of the most
+                                            memorable in your life.</p>
+                                </RevealWrapper>
+                            </div>
                             </div>
                             <div className={styles.hero_search_box}>
                             <RevealWrapper origin='bottom' delay={300}>
@@ -37,8 +36,6 @@ export default function Hero() {
                                 </div>
                             </RevealWrapper>
                             </div>
-                            
-                            
                         </div>
                     </Col>
                 </Row>

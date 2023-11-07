@@ -41,14 +41,14 @@ export default function HowWork() {
                     </Col>
                 </Row>
 
-                <Row>
-                    <Col lg={4}>
+                <Row className='justify-content-center gy-4'>
+                    <Col lg={4} md={6} className='d-flex justify-content-sm-center'>
                         <WorkKey />
                     </Col>
-                    <Col lg={4} className='d-flex justify-content-center'>
+                    <Col lg={4} md={6} className='d-flex justify-content-center'>
                         <WorkKey />
                     </Col>
-                    <Col lg={4} className='d-flex justify-content-end'>
+                    <Col lg={4} md={6} className='d-flex justify-content-xxl-end justify-content-md-center justify-content-center justify-content-sm-center'>
                         <WorkKey />
                     </Col>
                 </Row>

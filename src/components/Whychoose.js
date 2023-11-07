@@ -63,17 +63,17 @@ export default function WhyChoose (){
         <section className={styles.section}>
             <Container fluid>
                 <Row className='gx-0'>
-                    <Col lg={4}>
+                    <Col xl={4} lg={6}>
                         <div className={styles.thumb_wrap}>
                             <Image src={img1} alt='...'/>
                         </div>
                     </Col>
-                    <Col lg={8}>
+                    <Col xl={8} lg={6}>
                         <div className={styles.whychoose_card}>
                             <Row>
-                                <Col lg={8}>
+                                <Col xl={8} lg={12}>
                                     <Row>
-                                        <Col lg={6}>
+                                        <Col xl={6} lg={12} md={8}>
                                             <div className={styles.section_content}>
                                             <RevealWrapper origin='bottom' delay={100}>
                                                 <h6 className={styles.title}>Why Choose Us For Best Yacht  Booking</h6>
@@ -114,7 +114,7 @@ export default function WhyChoose (){
                                         //     : '';
 
                                         return (
-                                            <Col lg={6} key={index}>
+                                            <Col xl={6} md={6} key={index}>
                                                 <WhyChooseKey  
                                                     icon={data.icon} 
                                                     title={data.title} 

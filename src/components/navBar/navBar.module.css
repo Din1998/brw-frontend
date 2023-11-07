@@ -44,6 +44,7 @@
     padding: 8px 0px;
 }
 
+
 .header_area .container-fluid {
     padding: 0 100px;
 }
@@ -93,15 +94,15 @@
     filter: brightness(1);
 }
 
-@media screen and (max-width: 991px) {
+/* @media screen and (max-width: 991px) {
     .header_wrapper .logo_wrapper img {
         width: 160px;
     }
-}
+} */
 
-@media screen and (max-width: 424px) {
+@media screen and (max-width: 426px) {
     .header_wrapper .logo_wrapper img {
-        width: 112px;
+        width: 66px;
     }
 }
 
@@ -113,8 +114,8 @@
 }
 
 @media screen and (max-width: 991px) {
-    .header_wrapper .menu_wrapper {
-        display: none;
+    .header_wrapper .menu_wrapper .main_menu{
+        display: none !important;
     }
 }
 
@@ -975,6 +976,11 @@ li.login_registration_list__item .social-list__item .social-list__link i {
 
     .menu_wrapper {
         display: none;
+    }
+    .booknow_btn{
+        border-radius: 8px;
+        padding: 5px 8px;
+        font-size: 14px;
     }
 }
 

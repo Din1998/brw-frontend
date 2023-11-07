@@ -13,8 +13,8 @@ export default function Sponsor() {
     return(
         <section className={styles.section}>
             <Container>
-                <Row>
-                    <Col lg={4} className='d-flex justify-content-center'>
+                <Row className='gy-4 justify-content-center'>
+                    <Col lg={4} md={4} sm={6} className='d-flex justify-content-center'>
                         <div className={styles.sponsor_card}>
                             <div className={styles.thumb_wrap}>
                                 <Image src={img1} alt='...'/>
@@ -31,7 +31,7 @@ export default function Sponsor() {
                             </div>
                         </div>
                     </Col>
-                    <Col lg={4} className='d-flex justify-content-center'>
+                    <Col lg={4} md={4} sm={6} className='d-flex justify-content-center'>
                         <div className={styles.sponsor_card}>
                             <div className={styles.thumb_wrap}>
                                 <Image src={img2} alt='...'/>
@@ -48,7 +48,7 @@ export default function Sponsor() {
                             </div>
                         </div>
                     </Col>
-                    <Col lg={4} className='d-flex justify-content-center'>
+                    <Col lg={4} md={4} sm={6} className='d-flex justify-content-center'>
                         <div className={styles.sponsor_card}>
                             <div className={styles.thumb_wrap}>
                                 <Image src={img3} alt='...'/>

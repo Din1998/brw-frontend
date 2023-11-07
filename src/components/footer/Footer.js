@@ -44,7 +44,7 @@ export default function Footer(){
         <section className={styles.section}>
             <Container>
                 <Row>
-                    <Col lg={3}>
+                    <Col lg={3} md={6} sm={6} col={12}>
                         <div className={styles.logo_item}>
                             <div className={styles.logo_wrap}>
                                 <Image src={logo} alt='...' />
@@ -53,7 +53,7 @@ export default function Footer(){
                             <p className={styles.telNumber}>(878) 7845 8965</p>
                         </div>
                     </Col>
-                    <Col lg={2}>
+                    <Col lg={2} md={3} sm={6} col={6}>
                         <div className={styles.item}>
                             <h6 className={styles.item_title}>Quick Link</h6>
                             <ul className={styles.menu_wrap}>
@@ -64,7 +64,7 @@ export default function Footer(){
                             </ul>
                         </div>
                     </Col>
-                    <Col lg={2}>
+                    <Col lg={2} md={3} sm={6} col={6}>
                         <div className={styles.item}>
                             <h6 className={styles.item_title}>Popular Yachts</h6>
                             <ul className={styles.menu_wrap}>
@@ -75,7 +75,7 @@ export default function Footer(){
                             </ul>
                         </div>
                     </Col>
-                    <Col lg={2}>
+                    <Col lg={2} md={3} sm={6}>
                         <div className={styles.item}>
                             <h6 className={styles.item_title}>Contact Us</h6>
                             <ul className={styles.menu_wrap}>
@@ -93,37 +93,37 @@ export default function Footer(){
                             </ul>
                         </div>
                     </Col>
-                    <Col lg={3}>
+                    <Col lg={3} md={9}>
                         <div className={styles.item}>
                             <h6 className={styles.item_title}>instagram</h6>
                             <div className={styles.ins_thumbWrap}>
                                 <Row className='gy-2 gx-0'>
-                                    <Col lg={4}>
+                                    <Col lg={4} md={3} sm={3}>
                                         <div className={styles.thumb}>
                                             <Image src={img1} alt='...'/>
                                         </div>
                                     </Col>
-                                    <Col lg={4}>
+                                    <Col lg={4} md={3} sm={3}>
                                         <div className={styles.thumb}>
                                             <Image src={img2} alt='...'/>
                                         </div>
                                     </Col>
-                                    <Col lg={4}>
+                                    <Col lg={4} md={3} sm={3}>
                                         <div className={styles.thumb}>
                                             <Image src={img3} alt='...'/>
                                         </div>
                                     </Col>
-                                    <Col lg={4}>
+                                    <Col lg={4} md={3} sm={3}>
                                         <div className={styles.thumb}>
                                             <Image src={img4} alt='...'/>
                                         </div>
                                     </Col>
-                                    <Col lg={4}>
+                                    <Col lg={4} md={3} sm={3}>
                                         <div className={styles.thumb}>
                                             <Image src={img5} alt='...'/>
                                         </div>
                                     </Col>
-                                    <Col lg={4}>
+                                    <Col lg={4} md={3} sm={3}>
                                         <div className={styles.thumb}>
                                             <Image src={img6} alt='...'/>
                                         </div>

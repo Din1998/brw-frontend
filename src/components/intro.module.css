@@ -46,3 +46,20 @@
     line-height: 1.37;
 }
 
+@media (max-width:1440px){
+    .section{
+        padding: 0px 0px 100px 30px;
+    }
+    
+.right_side{
+    padding: 0px 40px 0px 40px;
+    position: relative;
+}
+}
+
+@media (max-width:991px){
+    .right_side{
+        padding: 50px 0px !important;
+        position: relative;
+    }
+}

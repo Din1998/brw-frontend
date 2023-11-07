@@ -13,24 +13,24 @@ export default function Luxury(){
         <section className={styles.section}>
             <Container fluid>
                 <Row>
-                    <Col lg={4}>
+                    <Col xxl={4} lg={6}>
                         <div className={styles.left_thumb_wrap}>
                             <Image src={img1} alt='...'/>
                         </div>
                     </Col>
-                    <Col lg={6}>
+                    <Col xxl={6} lg={6}>
                         <div className={styles.right_side}>
-                            <div className={styles.right_thumb_wrap}>
+                            {/* <div className={styles.right_thumb_wrap}>
                                 <Image src={img2} alt='...'/>
                                
-                            </div>
+                            </div> */}
                             <div className={styles.right_thumb_wrap2}>
                                 <Image src={img3} alt='...'/>
                             </div>
                             <Row>
-                                <Col lg={10}>
+                                <Col xl={10} lg={12}>
                                     <Row>
-                                        <Col lg={8}>
+                                        <Col xxl={8} lg={12} md={8}>
                                             <div className={styles.section_content}>
                                                 <h6 className={styles.title}>We charter professionally crewed, luxury yachts</h6>
                                                 <span className={styles.wave}>
@@ -62,19 +62,19 @@ export default function Luxury(){
                                             </div>
                                             <div className={styles.counter_wrap}>
                                                 <Row>
-                                                    <Col lg={4}>
+                                                    <Col lg={4} md={4}>
                                                         <div className={styles.counter}>
                                                             <h6 className={styles.number}>1025</h6>
                                                             <p className={styles.subtitle}>Satisfied customers</p>
                                                         </div>
                                                     </Col>
-                                                    <Col lg={4}>
+                                                    <Col lg={4} md={4}>
                                                         <div className={styles.counter}>
                                                             <h6 className={styles.number}>1025</h6>
                                                             <p className={styles.subtitle}>Satisfied customers</p>
                                                         </div>
                                                     </Col>
-                                                    <Col lg={4}>
+                                                    <Col lg={4} md={4}>
                                                         <div className={styles.counter}>
                                                             <h6 className={styles.number}>1025</h6>
                                                             <p className={styles.subtitle}>Satisfied customers</p>

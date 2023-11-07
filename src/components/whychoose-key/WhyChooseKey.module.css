@@ -23,3 +23,21 @@
     font-weight: 400;
     line-height: 1.87;
 }
+
+@media (max-width:1024px){
+    .offer_key_wrap{
+        display: flex;
+        padding-bottom: 0px;
+    }
+}
+
+@media (max-width:425px){
+    .offer_key_wrap{
+        flex-wrap: wrap;
+    }
+    .offer_key_wrap .content_wrap{
+        padding: 0px;
+        margin-top: 12px;
+    }
+    
+}

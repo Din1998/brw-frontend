@@ -56,7 +56,7 @@ export default function Contact() {
                         </div>
                     </Col>
                 </Row>
-                <Row>
+                <Row className='gy-4'>
                     <Col lg={4}>
                         <div className='contact_info_wrap'>
                             <div className='icon_wrap'>

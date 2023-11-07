@@ -17,7 +17,7 @@ export default function GallerySection() {
         <section className={styles.galley_section}>
             <Container fluid>
                 <Row className='justify-content-center'>
-                    <Col lg={4}>
+                    <Col xl={4} lg={10}>
                         <div className={styles.section_content}>
                         <RevealWrapper origin='bottom' delay={100}>
 
@@ -47,10 +47,10 @@ export default function GallerySection() {
                         </div>
                     </Col>
                 </Row>
-                <Row className='gx-2'>
-                    <Col lg={2}>
+                <Row className='gx-2 gy-2'>
+                    <Col xl={2} lg={3}>
                         <Row className='gy-2'>
-                            <Col lg={12}>
+                            <Col lg={12} md={6}>
                                 <Link href='/destination'>
                                     <div className={styles.card_wrap}>
                                         <div className={styles.thumb_wrap1}>
@@ -64,10 +64,8 @@ export default function GallerySection() {
                                     </div>
                                 </Link>
 
-
-
                             </Col>
-                            <Col lg={12}>
+                            <Col lg={12} md={6}>
                                 <Link href='/destination'>
                                     <div className={styles.card_wrap}>
                                         <div className={styles.thumb_wrap1}>
@@ -85,7 +83,7 @@ export default function GallerySection() {
                             </Col>
                         </Row>
                     </Col>
-                    <Col lg={3}>
+                    <Col xl={3} lg={9}>
                         <Row className='gx-2'>
                             <Col>
                                 <Link href='/destination'>
@@ -106,10 +104,10 @@ export default function GallerySection() {
                         </Row>
 
                     </Col>
-                    <Col lg={7}>
+                    <Col xl={7} lg={12}>
                         <div className={styles.layout_2}>
                             <Row className='gy-4 gx-2 mb-4'>
-                                <Col lg={5}>
+                                <Col lg={5} md={6}>
                                     <Link href='/destination'>
                                         <div className={styles.card_wrap}>
                                             <div className={styles.thumb_wrap}>
@@ -125,7 +123,7 @@ export default function GallerySection() {
 
 
                                 </Col>
-                                <Col lg={4}>
+                                <Col lg={4} md={6}>
                                     <Link href='/destination'>
                                         <div className={styles.card_wrap}>
                                             <div className={styles.thumb_wrap}>
@@ -140,7 +138,7 @@ export default function GallerySection() {
                                     </Link>
 
                                 </Col>
-                                <Col lg={3}>
+                                <Col lg={3} md={12}>
                                     <Link href='/destination'>
                                         <div className={styles.card_wrap}>
                                             <div className={styles.thumb_wrap}>
@@ -151,16 +149,13 @@ export default function GallerySection() {
                                                 <p className={styles.destination}>Starting from $69/night</p>
                                             </div>
                                         </div>
-
                                     </Link>
-
-
                                 </Col>
                             </Row>
                         </div>
                         <div className={styles.layout_3}>
                             <Row className='gy-4 gx-2'>
-                                <Col lg={4}>
+                                <Col lg={4} md={6}>
                                     <Link href='/destination'>
                                         <div className={styles.card_wrap}>
                                             <div className={styles.thumb_wrap}>
@@ -176,7 +171,7 @@ export default function GallerySection() {
 
 
                                 </Col>
-                                <Col lg={3}>
+                                <Col lg={3} md={6}>
                                     <Link href='/destination'>
                                         <div className={styles.card_wrap}>
                                             <div className={styles.thumb_wrap}>
