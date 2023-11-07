@@ -41,7 +41,7 @@
     width: 100%;
     box-shadow: rgba(9, 9, 9, 0.05) 0px 1px 0px;
     border-bottom: 1px solid hsl(var(--white)/0.08);
-    padding: 8px 0px;
+    padding: 8px 18px;
 }
 
 
@@ -683,7 +683,10 @@
         right: 74px !important;
     }
 }
-
+.header_menu_wrapper{
+    display: flex;
+    gap: 40px;align-items: center;
+}
 @media (max-width: 426px) {
     .header_menu_wrapper {
         margin-left: 14px;

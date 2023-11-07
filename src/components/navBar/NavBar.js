@@ -84,24 +84,28 @@ export default function NavBar() {
                 <Container fluid>
                     <Row>
                         <div className={styles.header_wrapper}>
-                            <i className='fa-sharp fa-solid fa-bars-staggered ham__menu' id="ham_menu" onClick={handleShow}></i>
-                            <div className={styles.header_menu_wrapper}>
-                                <div className={styles.logo_wrapper}>
-                                    <Link href="/" className={`${styles.normal} ${styles.logo}`} id="normal-logo">
-                                        {headerClass !== 'fixed-header' ? (
-                                            <Image
-                                                src={logo}
-                                                alt="logo"
-                                            />
-                                        ) : (
-                                            <Image
-                                                src={logo2}
-                                                alt="new logo"
-                                            />
-                                        )}
-                                    </Link>
+                         
+                               
+                                <div className={styles.header_menu_wrapper}>
+                                <i className='fa-sharp fa-solid fa-bars-staggered ham__menu' id="ham_menu" onClick={handleShow}></i>
+                                    <div className={styles.logo_wrapper}>
+                                        <Link href="/" className={`${styles.normal} ${styles.logo}`} id="normal-logo">
+                                            {headerClass !== 'fixed-header' ? (
+                                                <Image
+                                                    src={logo}
+                                                    alt="logo"
+                                                />
+                                            ) : (
+                                                <Image
+                                                    src={logo2}
+                                                    alt="new logo"
+                                                />
+                                            )}
+                                        </Link>
+                                    </div>
                                 </div>
-                            </div>
+                           
+                            
                             <div className={styles.menu_wrapper}>
                                 <ul className={styles.main_menu}>
                                     <li className={styles.home}><Link className={path === '/' ? styles.active : ''} href="/">Home </Link></li>

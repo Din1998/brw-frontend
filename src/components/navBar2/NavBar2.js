@@ -79,8 +79,8 @@ export default function NavBar2() {
                 <Container fluid>
                     <Row>
                         <div className={styles.header_wrapper}>
-                            <i className='fa-sharp fa-solid fa-bars-staggered ham__menu' id="ham_menu" onClick={handleShow}></i>
                             <div className={styles.header_menu_wrapper}>
+                                <i className='fa-sharp fa-solid fa-bars-staggered ham__menu' id="ham_menu" onClick={handleShow}></i>
                                 <div className={styles.logo_wrapper}>
                                     <Link href="/" className={styles.normal - logo} id="normal-logo">
                                         <Image

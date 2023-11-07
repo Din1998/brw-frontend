@@ -2782,7 +2782,7 @@ button:focus {
   width: 100%;
   box-shadow: rgba(9, 9, 9, 0.05) 0px 1px 0px;
   border-bottom: 1px solid hsl(var(--white)/0.08);
-  padding: 8px 0px;
+  padding: 8px 18px !important;
   z-index: 99;
 }
 /* header animation */
@@ -2826,7 +2826,7 @@ button:focus {
   width: 100%;
   box-shadow: rgba(9, 9, 9, 0.05) 0px 1px 0px;
   border-bottom: 1px solid hsl(var(--white)/0.08);
-  padding: 8px 0px;
+  padding: 8px 18px;
   z-index: 99;
 }
 /* header animation */
